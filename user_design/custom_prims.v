@@ -45,318 +45,6 @@ module OutPass4_frame_config_mux (
     parameter I3_reg = 0;
 endmodule
 
-//Warning: The primitive AXI4_LITE_SLAVE_BEL was added by FABulous automatically.
-(* blackbox, keep *)
-module AXIL_S_BEL (
-    input FAB_AWREADY,
-    input FAB_WREADY,
-    input FAB_BRESP0,
-    input FAB_BRESP1,
-    input FAB_BVALID,
-    input FAB_ARREADY,
-    input FAB_RDATA0,
-    input FAB_RDATA1,
-    input FAB_RDATA2,
-    input FAB_RDATA3,
-    input FAB_RDATA4,
-    input FAB_RDATA5,
-    input FAB_RDATA6,
-    input FAB_RDATA7,
-    input FAB_RDATA8,
-    input FAB_RDATA9,
-    input FAB_RDATA10,
-    input FAB_RDATA11,
-    input FAB_RDATA12,
-    input FAB_RDATA13,
-    input FAB_RDATA14,
-    input FAB_RDATA15,
-    input FAB_RDATA16,
-    input FAB_RDATA17,
-    input FAB_RDATA18,
-    input FAB_RDATA19,
-    input FAB_RDATA20,
-    input FAB_RDATA21,
-    input FAB_RDATA22,
-    input FAB_RDATA23,
-    input FAB_RDATA24,
-    input FAB_RDATA25,
-    input FAB_RDATA26,
-    input FAB_RDATA27,
-    input FAB_RDATA28,
-    input FAB_RDATA29,
-    input FAB_RDATA30,
-    input FAB_RDATA31,
-    input FAB_RRESP0,
-    input FAB_RRESP1,
-    input FAB_RVALID,
-    output FAB_AWADDR0,
-    output FAB_AWADDR1,
-    output FAB_AWADDR2,
-    output FAB_AWADDR3,
-    output FAB_AWADDR4,
-    output FAB_AWADDR5,
-    output FAB_AWADDR6,
-    output FAB_AWADDR7,
-    output FAB_AWADDR8,
-    output FAB_AWADDR9,
-    output FAB_AWVALID,
-    output FAB_WDATA0,
-    output FAB_WDATA1,
-    output FAB_WDATA2,
-    output FAB_WDATA3,
-    output FAB_WDATA4,
-    output FAB_WDATA5,
-    output FAB_WDATA6,
-    output FAB_WDATA7,
-    output FAB_WDATA8,
-    output FAB_WDATA9,
-    output FAB_WDATA10,
-    output FAB_WDATA11,
-    output FAB_WDATA12,
-    output FAB_WDATA13,
-    output FAB_WDATA14,
-    output FAB_WDATA15,
-    output FAB_WDATA16,
-    output FAB_WDATA17,
-    output FAB_WDATA18,
-    output FAB_WDATA19,
-    output FAB_WDATA20,
-    output FAB_WDATA21,
-    output FAB_WDATA22,
-    output FAB_WDATA23,
-    output FAB_WDATA24,
-    output FAB_WDATA25,
-    output FAB_WDATA26,
-    output FAB_WDATA27,
-    output FAB_WDATA28,
-    output FAB_WDATA29,
-    output FAB_WDATA30,
-    output FAB_WDATA31,
-    output FAB_WSTRB0,
-    output FAB_WSTRB1,
-    output FAB_WSTRB2,
-    output FAB_WSTRB3,
-    output FAB_WVALID,
-    output FAB_BREADY,
-    output FAB_ARADDR0,
-    output FAB_ARADDR1,
-    output FAB_ARADDR2,
-    output FAB_ARADDR3,
-    output FAB_ARADDR4,
-    output FAB_ARADDR5,
-    output FAB_ARADDR6,
-    output FAB_ARADDR7,
-    output FAB_ARADDR8,
-    output FAB_ARADDR9,
-    output FAB_ARVALID,
-    output FAB_RREADY,
-    (* iopad_external_pin *)
-    input SOC_AWADDR0,
-    (* iopad_external_pin *)
-    input SOC_AWADDR1,
-    (* iopad_external_pin *)
-    input SOC_AWADDR2,
-    (* iopad_external_pin *)
-    input SOC_AWADDR3,
-    (* iopad_external_pin *)
-    input SOC_AWADDR4,
-    (* iopad_external_pin *)
-    input SOC_AWADDR5,
-    (* iopad_external_pin *)
-    input SOC_AWADDR6,
-    (* iopad_external_pin *)
-    input SOC_AWADDR7,
-    (* iopad_external_pin *)
-    input SOC_AWADDR8,
-    (* iopad_external_pin *)
-    input SOC_AWADDR9,
-    (* iopad_external_pin *)
-    input SOC_AWVALID,
-    (* iopad_external_pin *)
-    input SOC_WDATA0,
-    (* iopad_external_pin *)
-    input SOC_WDATA1,
-    (* iopad_external_pin *)
-    input SOC_WDATA2,
-    (* iopad_external_pin *)
-    input SOC_WDATA3,
-    (* iopad_external_pin *)
-    input SOC_WDATA4,
-    (* iopad_external_pin *)
-    input SOC_WDATA5,
-    (* iopad_external_pin *)
-    input SOC_WDATA6,
-    (* iopad_external_pin *)
-    input SOC_WDATA7,
-    (* iopad_external_pin *)
-    input SOC_WDATA8,
-    (* iopad_external_pin *)
-    input SOC_WDATA9,
-    (* iopad_external_pin *)
-    input SOC_WDATA10,
-    (* iopad_external_pin *)
-    input SOC_WDATA11,
-    (* iopad_external_pin *)
-    input SOC_WDATA12,
-    (* iopad_external_pin *)
-    input SOC_WDATA13,
-    (* iopad_external_pin *)
-    input SOC_WDATA14,
-    (* iopad_external_pin *)
-    input SOC_WDATA15,
-    (* iopad_external_pin *)
-    input SOC_WDATA16,
-    (* iopad_external_pin *)
-    input SOC_WDATA17,
-    (* iopad_external_pin *)
-    input SOC_WDATA18,
-    (* iopad_external_pin *)
-    input SOC_WDATA19,
-    (* iopad_external_pin *)
-    input SOC_WDATA20,
-    (* iopad_external_pin *)
-    input SOC_WDATA21,
-    (* iopad_external_pin *)
-    input SOC_WDATA22,
-    (* iopad_external_pin *)
-    input SOC_WDATA23,
-    (* iopad_external_pin *)
-    input SOC_WDATA24,
-    (* iopad_external_pin *)
-    input SOC_WDATA25,
-    (* iopad_external_pin *)
-    input SOC_WDATA26,
-    (* iopad_external_pin *)
-    input SOC_WDATA27,
-    (* iopad_external_pin *)
-    input SOC_WDATA28,
-    (* iopad_external_pin *)
-    input SOC_WDATA29,
-    (* iopad_external_pin *)
-    input SOC_WDATA30,
-    (* iopad_external_pin *)
-    input SOC_WDATA31,
-    (* iopad_external_pin *)
-    input SOC_WSTRB0,
-    (* iopad_external_pin *)
-    input SOC_WSTRB1,
-    (* iopad_external_pin *)
-    input SOC_WSTRB2,
-    (* iopad_external_pin *)
-    input SOC_WSTRB3,
-    (* iopad_external_pin *)
-    input SOC_WVALID,
-    (* iopad_external_pin *)
-    input SOC_BREADY,
-    (* iopad_external_pin *)
-    input SOC_ARADDR0,
-    (* iopad_external_pin *)
-    input SOC_ARADDR1,
-    (* iopad_external_pin *)
-    input SOC_ARADDR2,
-    (* iopad_external_pin *)
-    input SOC_ARADDR3,
-    (* iopad_external_pin *)
-    input SOC_ARADDR4,
-    (* iopad_external_pin *)
-    input SOC_ARADDR5,
-    (* iopad_external_pin *)
-    input SOC_ARADDR6,
-    (* iopad_external_pin *)
-    input SOC_ARADDR7,
-    (* iopad_external_pin *)
-    input SOC_ARADDR8,
-    (* iopad_external_pin *)
-    input SOC_ARADDR9,
-    (* iopad_external_pin *)
-    input SOC_ARVALID,
-    (* iopad_external_pin *)
-    input SOC_RREADY,
-    (* iopad_external_pin *)
-    output SOC_AWREADY,
-    (* iopad_external_pin *)
-    output SOC_WREADY,
-    (* iopad_external_pin *)
-    output SOC_BRESP0,
-    (* iopad_external_pin *)
-    output SOC_BRESP1,
-    (* iopad_external_pin *)
-    output SOC_BVALID,
-    (* iopad_external_pin *)
-    output SOC_ARREADY,
-    (* iopad_external_pin *)
-    output SOC_RDATA0,
-    (* iopad_external_pin *)
-    output SOC_RDATA1,
-    (* iopad_external_pin *)
-    output SOC_RDATA2,
-    (* iopad_external_pin *)
-    output SOC_RDATA3,
-    (* iopad_external_pin *)
-    output SOC_RDATA4,
-    (* iopad_external_pin *)
-    output SOC_RDATA5,
-    (* iopad_external_pin *)
-    output SOC_RDATA6,
-    (* iopad_external_pin *)
-    output SOC_RDATA7,
-    (* iopad_external_pin *)
-    output SOC_RDATA8,
-    (* iopad_external_pin *)
-    output SOC_RDATA9,
-    (* iopad_external_pin *)
-    output SOC_RDATA10,
-    (* iopad_external_pin *)
-    output SOC_RDATA11,
-    (* iopad_external_pin *)
-    output SOC_RDATA12,
-    (* iopad_external_pin *)
-    output SOC_RDATA13,
-    (* iopad_external_pin *)
-    output SOC_RDATA14,
-    (* iopad_external_pin *)
-    output SOC_RDATA15,
-    (* iopad_external_pin *)
-    output SOC_RDATA16,
-    (* iopad_external_pin *)
-    output SOC_RDATA17,
-    (* iopad_external_pin *)
-    output SOC_RDATA18,
-    (* iopad_external_pin *)
-    output SOC_RDATA19,
-    (* iopad_external_pin *)
-    output SOC_RDATA20,
-    (* iopad_external_pin *)
-    output SOC_RDATA21,
-    (* iopad_external_pin *)
-    output SOC_RDATA22,
-    (* iopad_external_pin *)
-    output SOC_RDATA23,
-    (* iopad_external_pin *)
-    output SOC_RDATA24,
-    (* iopad_external_pin *)
-    output SOC_RDATA25,
-    (* iopad_external_pin *)
-    output SOC_RDATA26,
-    (* iopad_external_pin *)
-    output SOC_RDATA27,
-    (* iopad_external_pin *)
-    output SOC_RDATA28,
-    (* iopad_external_pin *)
-    output SOC_RDATA29,
-    (* iopad_external_pin *)
-    output SOC_RDATA30,
-    (* iopad_external_pin *)
-    output SOC_RDATA31,
-    (* iopad_external_pin *)
-    output SOC_RRESP0,
-    (* iopad_external_pin *)
-    output SOC_RRESP1,
-    (* iopad_external_pin *)
-    output SOC_RVALID
-);
-endmodule
-
 //Warning: The primitive NPU_ACT_ROW_BEL was added by FABulous automatically.
 (* blackbox, keep *)
 module NPU_ACT_ROW_BEL (
@@ -1415,4 +1103,334 @@ module AXI_M_BEL (
     parameter TIE_OFF_ARBURST = 0;
     parameter TIE_OFF_ARLOCK = 0;
     parameter TIE_OFF_ARCACHE = 0;
+endmodule
+
+//Warning: The primitive AXIL_S_BEL was added by FABulous automatically.
+(* blackbox, keep *)
+module AXIL_S_BEL (
+    input FAB_AWREADY,
+    input FAB_WREADY,
+    input FAB_BRESP0,
+    input FAB_BRESP1,
+    input FAB_BVALID,
+    input FAB_ARREADY,
+    input FAB_RDATA0,
+    input FAB_RDATA1,
+    input FAB_RDATA2,
+    input FAB_RDATA3,
+    input FAB_RDATA4,
+    input FAB_RDATA5,
+    input FAB_RDATA6,
+    input FAB_RDATA7,
+    input FAB_RDATA8,
+    input FAB_RDATA9,
+    input FAB_RDATA10,
+    input FAB_RDATA11,
+    input FAB_RDATA12,
+    input FAB_RDATA13,
+    input FAB_RDATA14,
+    input FAB_RDATA15,
+    input FAB_RDATA16,
+    input FAB_RDATA17,
+    input FAB_RDATA18,
+    input FAB_RDATA19,
+    input FAB_RDATA20,
+    input FAB_RDATA21,
+    input FAB_RDATA22,
+    input FAB_RDATA23,
+    input FAB_RDATA24,
+    input FAB_RDATA25,
+    input FAB_RDATA26,
+    input FAB_RDATA27,
+    input FAB_RDATA28,
+    input FAB_RDATA29,
+    input FAB_RDATA30,
+    input FAB_RDATA31,
+    input FAB_RRESP0,
+    input FAB_RRESP1,
+    input FAB_RVALID,
+    output FAB_AWADDR0,
+    output FAB_AWADDR1,
+    output FAB_AWADDR2,
+    output FAB_AWADDR3,
+    output FAB_AWADDR4,
+    output FAB_AWADDR5,
+    output FAB_AWADDR6,
+    output FAB_AWADDR7,
+    output FAB_AWADDR8,
+    output FAB_AWADDR9,
+    output FAB_AWPROT0,
+    output FAB_AWPROT1,
+    output FAB_AWPROT2,
+    output FAB_AWVALID,
+    output FAB_WDATA0,
+    output FAB_WDATA1,
+    output FAB_WDATA2,
+    output FAB_WDATA3,
+    output FAB_WDATA4,
+    output FAB_WDATA5,
+    output FAB_WDATA6,
+    output FAB_WDATA7,
+    output FAB_WDATA8,
+    output FAB_WDATA9,
+    output FAB_WDATA10,
+    output FAB_WDATA11,
+    output FAB_WDATA12,
+    output FAB_WDATA13,
+    output FAB_WDATA14,
+    output FAB_WDATA15,
+    output FAB_WDATA16,
+    output FAB_WDATA17,
+    output FAB_WDATA18,
+    output FAB_WDATA19,
+    output FAB_WDATA20,
+    output FAB_WDATA21,
+    output FAB_WDATA22,
+    output FAB_WDATA23,
+    output FAB_WDATA24,
+    output FAB_WDATA25,
+    output FAB_WDATA26,
+    output FAB_WDATA27,
+    output FAB_WDATA28,
+    output FAB_WDATA29,
+    output FAB_WDATA30,
+    output FAB_WDATA31,
+    output FAB_WSTRB0,
+    output FAB_WSTRB1,
+    output FAB_WSTRB2,
+    output FAB_WSTRB3,
+    output FAB_WVALID,
+    output FAB_BREADY,
+    output FAB_ARADDR0,
+    output FAB_ARADDR1,
+    output FAB_ARADDR2,
+    output FAB_ARADDR3,
+    output FAB_ARADDR4,
+    output FAB_ARADDR5,
+    output FAB_ARADDR6,
+    output FAB_ARADDR7,
+    output FAB_ARADDR8,
+    output FAB_ARADDR9,
+    output FAB_ARPROT0,
+    output FAB_ARPROT1,
+    output FAB_ARPROT2,
+    output FAB_ARVALID,
+    output FAB_RREADY,
+    (* iopad_external_pin *)
+    input SOC_AWADDR0,
+    (* iopad_external_pin *)
+    input SOC_AWADDR1,
+    (* iopad_external_pin *)
+    input SOC_AWADDR2,
+    (* iopad_external_pin *)
+    input SOC_AWADDR3,
+    (* iopad_external_pin *)
+    input SOC_AWADDR4,
+    (* iopad_external_pin *)
+    input SOC_AWADDR5,
+    (* iopad_external_pin *)
+    input SOC_AWADDR6,
+    (* iopad_external_pin *)
+    input SOC_AWADDR7,
+    (* iopad_external_pin *)
+    input SOC_AWADDR8,
+    (* iopad_external_pin *)
+    input SOC_AWADDR9,
+    (* iopad_external_pin *)
+    input SOC_AWPROT0,
+    (* iopad_external_pin *)
+    input SOC_AWPROT1,
+    (* iopad_external_pin *)
+    input SOC_AWPROT2,
+    (* iopad_external_pin *)
+    input SOC_AWVALID,
+    (* iopad_external_pin *)
+    input SOC_WDATA0,
+    (* iopad_external_pin *)
+    input SOC_WDATA1,
+    (* iopad_external_pin *)
+    input SOC_WDATA2,
+    (* iopad_external_pin *)
+    input SOC_WDATA3,
+    (* iopad_external_pin *)
+    input SOC_WDATA4,
+    (* iopad_external_pin *)
+    input SOC_WDATA5,
+    (* iopad_external_pin *)
+    input SOC_WDATA6,
+    (* iopad_external_pin *)
+    input SOC_WDATA7,
+    (* iopad_external_pin *)
+    input SOC_WDATA8,
+    (* iopad_external_pin *)
+    input SOC_WDATA9,
+    (* iopad_external_pin *)
+    input SOC_WDATA10,
+    (* iopad_external_pin *)
+    input SOC_WDATA11,
+    (* iopad_external_pin *)
+    input SOC_WDATA12,
+    (* iopad_external_pin *)
+    input SOC_WDATA13,
+    (* iopad_external_pin *)
+    input SOC_WDATA14,
+    (* iopad_external_pin *)
+    input SOC_WDATA15,
+    (* iopad_external_pin *)
+    input SOC_WDATA16,
+    (* iopad_external_pin *)
+    input SOC_WDATA17,
+    (* iopad_external_pin *)
+    input SOC_WDATA18,
+    (* iopad_external_pin *)
+    input SOC_WDATA19,
+    (* iopad_external_pin *)
+    input SOC_WDATA20,
+    (* iopad_external_pin *)
+    input SOC_WDATA21,
+    (* iopad_external_pin *)
+    input SOC_WDATA22,
+    (* iopad_external_pin *)
+    input SOC_WDATA23,
+    (* iopad_external_pin *)
+    input SOC_WDATA24,
+    (* iopad_external_pin *)
+    input SOC_WDATA25,
+    (* iopad_external_pin *)
+    input SOC_WDATA26,
+    (* iopad_external_pin *)
+    input SOC_WDATA27,
+    (* iopad_external_pin *)
+    input SOC_WDATA28,
+    (* iopad_external_pin *)
+    input SOC_WDATA29,
+    (* iopad_external_pin *)
+    input SOC_WDATA30,
+    (* iopad_external_pin *)
+    input SOC_WDATA31,
+    (* iopad_external_pin *)
+    input SOC_WSTRB0,
+    (* iopad_external_pin *)
+    input SOC_WSTRB1,
+    (* iopad_external_pin *)
+    input SOC_WSTRB2,
+    (* iopad_external_pin *)
+    input SOC_WSTRB3,
+    (* iopad_external_pin *)
+    input SOC_WVALID,
+    (* iopad_external_pin *)
+    input SOC_BREADY,
+    (* iopad_external_pin *)
+    input SOC_ARADDR0,
+    (* iopad_external_pin *)
+    input SOC_ARADDR1,
+    (* iopad_external_pin *)
+    input SOC_ARADDR2,
+    (* iopad_external_pin *)
+    input SOC_ARADDR3,
+    (* iopad_external_pin *)
+    input SOC_ARADDR4,
+    (* iopad_external_pin *)
+    input SOC_ARADDR5,
+    (* iopad_external_pin *)
+    input SOC_ARADDR6,
+    (* iopad_external_pin *)
+    input SOC_ARADDR7,
+    (* iopad_external_pin *)
+    input SOC_ARADDR8,
+    (* iopad_external_pin *)
+    input SOC_ARADDR9,
+    (* iopad_external_pin *)
+    input SOC_ARPROT0,
+    (* iopad_external_pin *)
+    input SOC_ARPROT1,
+    (* iopad_external_pin *)
+    input SOC_ARPROT2,
+    (* iopad_external_pin *)
+    input SOC_ARVALID,
+    (* iopad_external_pin *)
+    input SOC_RREADY,
+    (* iopad_external_pin *)
+    output SOC_AWREADY,
+    (* iopad_external_pin *)
+    output SOC_WREADY,
+    (* iopad_external_pin *)
+    output SOC_BRESP0,
+    (* iopad_external_pin *)
+    output SOC_BRESP1,
+    (* iopad_external_pin *)
+    output SOC_BVALID,
+    (* iopad_external_pin *)
+    output SOC_ARREADY,
+    (* iopad_external_pin *)
+    output SOC_RDATA0,
+    (* iopad_external_pin *)
+    output SOC_RDATA1,
+    (* iopad_external_pin *)
+    output SOC_RDATA2,
+    (* iopad_external_pin *)
+    output SOC_RDATA3,
+    (* iopad_external_pin *)
+    output SOC_RDATA4,
+    (* iopad_external_pin *)
+    output SOC_RDATA5,
+    (* iopad_external_pin *)
+    output SOC_RDATA6,
+    (* iopad_external_pin *)
+    output SOC_RDATA7,
+    (* iopad_external_pin *)
+    output SOC_RDATA8,
+    (* iopad_external_pin *)
+    output SOC_RDATA9,
+    (* iopad_external_pin *)
+    output SOC_RDATA10,
+    (* iopad_external_pin *)
+    output SOC_RDATA11,
+    (* iopad_external_pin *)
+    output SOC_RDATA12,
+    (* iopad_external_pin *)
+    output SOC_RDATA13,
+    (* iopad_external_pin *)
+    output SOC_RDATA14,
+    (* iopad_external_pin *)
+    output SOC_RDATA15,
+    (* iopad_external_pin *)
+    output SOC_RDATA16,
+    (* iopad_external_pin *)
+    output SOC_RDATA17,
+    (* iopad_external_pin *)
+    output SOC_RDATA18,
+    (* iopad_external_pin *)
+    output SOC_RDATA19,
+    (* iopad_external_pin *)
+    output SOC_RDATA20,
+    (* iopad_external_pin *)
+    output SOC_RDATA21,
+    (* iopad_external_pin *)
+    output SOC_RDATA22,
+    (* iopad_external_pin *)
+    output SOC_RDATA23,
+    (* iopad_external_pin *)
+    output SOC_RDATA24,
+    (* iopad_external_pin *)
+    output SOC_RDATA25,
+    (* iopad_external_pin *)
+    output SOC_RDATA26,
+    (* iopad_external_pin *)
+    output SOC_RDATA27,
+    (* iopad_external_pin *)
+    output SOC_RDATA28,
+    (* iopad_external_pin *)
+    output SOC_RDATA29,
+    (* iopad_external_pin *)
+    output SOC_RDATA30,
+    (* iopad_external_pin *)
+    output SOC_RDATA31,
+    (* iopad_external_pin *)
+    output SOC_RRESP0,
+    (* iopad_external_pin *)
+    output SOC_RRESP1,
+    (* iopad_external_pin *)
+    output SOC_RVALID
+);
 endmodule

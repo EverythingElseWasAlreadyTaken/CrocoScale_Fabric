@@ -1,4 +1,4 @@
-TILE,AXIL_S_IO_W_3,,,,,,,,,,,,,,,,,
+TILE,AXIL_S_IO_W_5,,,,,,,,,,,,,,,,,
 #direction,source_name,X-offset,Y-offset,destination_name,wires,,,,,,,,,,,,,
 NORTH,N1BEG,0,-1,N1END,4,,,,,,,,,,,,,
 NORTH,N2BEG,0,-1,N2MID,8,,,,,,,,,,,,,
@@ -30,8 +30,8 @@ JUMP,NULL,0,0,GND,1,,,,,,,,,,,,,
 JUMP,NULL,0,0,VCC,1,,,,,,,,,,,,,
 
 SJUMP,BASE_TO_TOP,0,0,NULL,8,,,
-SJUMP,NULL,0,0,TOP_TO_BASE,14,,,
+SJUMP,NULL,0,0,TOP_TO_BASE,16,,,
 
-MATRIX,./AXIL_S_IO_W_3_switch_matrix.list
+MATRIX,./AXIL_S_IO_W_5_switch_matrix.list
 
 EndTILE,,,,,,,,,,,,,,,,,,

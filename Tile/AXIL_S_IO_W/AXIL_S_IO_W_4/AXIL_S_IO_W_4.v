@@ -1,4 +1,4 @@
-module AXIL_S_IO_W_2
+module AXIL_S_IO_W_4
     #(
 `ifdef EMULATION
         parameter [639:0] Emulate_Bitstream=640'b0,
@@ -39,7 +39,7 @@ module AXIL_S_IO_W_2
         output  [15:0] S4BEG,        //TilePort({S} OUTPUT S4BEG[3:0])
     //SJUMP ports (supertile BEL interface)
         output  [8-1:0] BASE_TO_TOP,
-        input  [10-1:0] TOP_TO_BASE,
+        input  [16-1:0] TOP_TO_BASE,
     //Tile IO ports from BELs
         input  UserCLK,
         output  UserCLKo,
@@ -844,13 +844,13 @@ clk_buf inst_clk_buf (
 
 
  //configuration storage latches
-AXIL_S_IO_W_2_ConfigMem
+AXIL_S_IO_W_4_ConfigMem
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(Emulate_Bitstream)
     )
 `endif
-    Inst_AXIL_S_IO_W_2_ConfigMem
+    Inst_AXIL_S_IO_W_4_ConfigMem
     (
     .FrameData(FrameData),
     .FrameStrobe(FrameStrobe),
@@ -858,7 +858,7 @@ AXIL_S_IO_W_2_ConfigMem
     .ConfigBits_N(ConfigBits_N)
 );
 
-AXIL_S_IO_W_2_switch_matrix Inst_AXIL_S_IO_W_2_switch_matrix (
+AXIL_S_IO_W_4_switch_matrix Inst_AXIL_S_IO_W_4_switch_matrix (
     .N1END0(N1END[0]),
     .N1END1(N1END[1]),
     .N1END2(N1END[2]),
@@ -1125,6 +1125,12 @@ AXIL_S_IO_W_2_switch_matrix Inst_AXIL_S_IO_W_2_switch_matrix (
     .TOP_TO_BASE7(TOP_TO_BASE[7]),
     .TOP_TO_BASE8(TOP_TO_BASE[8]),
     .TOP_TO_BASE9(TOP_TO_BASE[9]),
+    .TOP_TO_BASE10(TOP_TO_BASE[10]),
+    .TOP_TO_BASE11(TOP_TO_BASE[11]),
+    .TOP_TO_BASE12(TOP_TO_BASE[12]),
+    .TOP_TO_BASE13(TOP_TO_BASE[13]),
+    .TOP_TO_BASE14(TOP_TO_BASE[14]),
+    .TOP_TO_BASE15(TOP_TO_BASE[15]),
     .ConfigBits(ConfigBits[240-1:0]),
     .ConfigBits_N(ConfigBits_N[240-1:0])
 );
