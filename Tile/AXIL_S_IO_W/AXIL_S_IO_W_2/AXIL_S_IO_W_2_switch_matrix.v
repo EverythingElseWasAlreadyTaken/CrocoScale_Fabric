@@ -592,7 +592,7 @@ assign N2BEGb6 = N2MID6;
 assign N2BEGb7 = N2MID7;
 
  //switch matrix multiplexer N4BEG0 MUX-8
-assign N4BEG0_input = {J_NS2_END0,J_NS4_END12,J_NS4_END8,J_NS4_END4,J_NS4_END0,W6END8,WW4END0,W1END0};
+assign N4BEG0_input = {J_NS4_END12,J_NS4_END8,J_NS4_END4,J_NS4_END0,W6END8,WW4END4,WW4END0,W1END0};
 cus_mux81 inst_cus_mux81_N4BEG0 (
     .A0(N4BEG0_input[0]),
     .A1(N4BEG0_input[1]),
@@ -612,7 +612,7 @@ cus_mux81 inst_cus_mux81_N4BEG0 (
 );
 
  //switch matrix multiplexer N4BEG1 MUX-8
-assign N4BEG1_input = {J_NS2_END1,J_NS4_END13,J_NS4_END9,J_NS4_END5,J_NS4_END1,W6END9,WW4END1,W1END1};
+assign N4BEG1_input = {J_NS4_END13,J_NS4_END9,J_NS4_END5,J_NS4_END1,W6END9,WW4END5,WW4END1,W1END1};
 cus_mux81 inst_cus_mux81_N4BEG1 (
     .A0(N4BEG1_input[0]),
     .A1(N4BEG1_input[1]),
@@ -632,7 +632,7 @@ cus_mux81 inst_cus_mux81_N4BEG1 (
 );
 
  //switch matrix multiplexer N4BEG2 MUX-8
-assign N4BEG2_input = {J_NS2_END2,J_NS4_END14,J_NS4_END10,J_NS4_END6,J_NS4_END2,W6END10,WW4END2,W1END2};
+assign N4BEG2_input = {J_NS4_END14,J_NS4_END10,J_NS4_END6,J_NS4_END2,W6END10,WW4END6,WW4END2,W1END2};
 cus_mux81 inst_cus_mux81_N4BEG2 (
     .A0(N4BEG2_input[0]),
     .A1(N4BEG2_input[1]),
@@ -652,7 +652,7 @@ cus_mux81 inst_cus_mux81_N4BEG2 (
 );
 
  //switch matrix multiplexer N4BEG3 MUX-8
-assign N4BEG3_input = {J_NS2_END3,J_NS4_END15,J_NS4_END11,J_NS4_END7,J_NS4_END3,W6END11,WW4END3,W1END3};
+assign N4BEG3_input = {J_NS4_END15,J_NS4_END11,J_NS4_END7,J_NS4_END3,W6END11,WW4END7,WW4END3,W1END3};
 cus_mux81 inst_cus_mux81_N4BEG3 (
     .A0(N4BEG3_input[0]),
     .A1(N4BEG3_input[1]),
@@ -864,7 +864,7 @@ assign S2BEGb6 = S2MID6;
 assign S2BEGb7 = S2MID7;
 
  //switch matrix multiplexer S4BEG0 MUX-8
-assign S4BEG0_input = {J_NS2_END4,J_NS4_END12,J_NS4_END8,J_NS4_END4,J_NS4_END0,W6END4,WW4END12,W1END0};
+assign S4BEG0_input = {J_NS4_END12,J_NS4_END8,J_NS4_END4,J_NS4_END0,W6END4,WW4END12,WW4END8,W1END0};
 cus_mux81 inst_cus_mux81_S4BEG0 (
     .A0(S4BEG0_input[0]),
     .A1(S4BEG0_input[1]),
@@ -884,7 +884,7 @@ cus_mux81 inst_cus_mux81_S4BEG0 (
 );
 
  //switch matrix multiplexer S4BEG1 MUX-8
-assign S4BEG1_input = {J_NS2_END5,J_NS4_END13,J_NS4_END9,J_NS4_END5,J_NS4_END1,W6END5,WW4END13,W1END1};
+assign S4BEG1_input = {J_NS4_END13,J_NS4_END9,J_NS4_END5,J_NS4_END1,W6END5,WW4END13,WW4END9,W1END1};
 cus_mux81 inst_cus_mux81_S4BEG1 (
     .A0(S4BEG1_input[0]),
     .A1(S4BEG1_input[1]),
@@ -904,7 +904,7 @@ cus_mux81 inst_cus_mux81_S4BEG1 (
 );
 
  //switch matrix multiplexer S4BEG2 MUX-8
-assign S4BEG2_input = {J_NS2_END6,J_NS4_END14,J_NS4_END10,J_NS4_END6,J_NS4_END2,W6END6,WW4END14,W1END2};
+assign S4BEG2_input = {J_NS4_END14,J_NS4_END10,J_NS4_END6,J_NS4_END2,W6END6,WW4END14,WW4END10,W1END2};
 cus_mux81 inst_cus_mux81_S4BEG2 (
     .A0(S4BEG2_input[0]),
     .A1(S4BEG2_input[1]),
@@ -924,7 +924,7 @@ cus_mux81 inst_cus_mux81_S4BEG2 (
 );
 
  //switch matrix multiplexer S4BEG3 MUX-8
-assign S4BEG3_input = {J_NS2_END7,J_NS4_END15,J_NS4_END11,J_NS4_END7,J_NS4_END3,W6END7,WW4END15,W1END3};
+assign S4BEG3_input = {J_NS4_END15,J_NS4_END11,J_NS4_END7,J_NS4_END3,W6END7,WW4END15,WW4END11,W1END3};
 cus_mux81 inst_cus_mux81_S4BEG3 (
     .A0(S4BEG3_input[0]),
     .A1(S4BEG3_input[1]),
