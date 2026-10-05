@@ -15,9 +15,9 @@ vars:
   MAX_BITBYTES: '{{.MAX_BITBYTES | default "32768"}}'
   FAB_PROJ_ROOT: '{{.FAB_PROJ_ROOT | default ".."}}'
   BUILD_DIR: '{{.BUILD_DIR | default "build"}}'
-  DESIGN: '{{.DESIGN | default "sequential_16bit_en"}}'
+  DESIGN: '{{.DESIGN | default "full_io"}}'
   TESTBENCH: "{{.DESIGN}}_tb"
-  TOP_WRAPPER: '{{.TOP_WRAPPER | default "top_wrapper"}}'
+  TOP_WRAPPER: '{{.TOP_WRAPPER | default "full_io_top"}}'
   USER_DESIGN_DIR: "{{.FAB_PROJ_ROOT}}/user_design"
   WAVEFORM_TYPE: '{{.WAVEFORM_TYPE | default "fst"}}'
   SIMULATOR: '{{.SIMULATOR | default "iverilog"}}'
@@ -31,21 +31,13 @@ vars:
 tasks:
   fab-sim:
     aliases: [default]
-    desc: Build demo fabric, build test design, run simulation, then clean up
+    desc: Build the fabric, build the test design (default full_io), run simulation, then clean up
     cmds:
       - task: build-demo-fabric
       - task: build-test-design
       - task: run-simulation
       - task: clean
 
-  full-sim:
-    desc: Run FABulous demo, build test design, run simulation + emulation, then clean up
-    cmds:
-      - task: run-fabulous-demo
-      - task: build-test-design
-      - task: run-emulation
-      - task: run-simulation
-      - task: clean
 
   build-test-design:
     desc: Synthesize, place & route, generate bitstream, and copy fabric files
@@ -55,15 +47,6 @@ tasks:
       - task: run-bitgen
       - task: copy-files
 
-  run-fabulous-demo:
-    desc: Run FABulous to generate the default fabric
-    cmds:
-      - FABulous {{.FAB_PROJ_ROOT}} -fs {{.FAB_PROJ_ROOT}}/FABulous.tcl
-      # FABulous removes build dirs during simulation; re-create afterwards.
-      - mkdir -p {{.BUILD_DIR}} {{.FABRIC_FILES_DIR}}
-      - mv -f {{.DESIGN}}.hex {{.BUILD_DIR}}/
-      - mv -f {{.DESIGN}}.fst {{.BUILD_DIR}}/
-      - cp -fu {{.USER_DESIGN_DIR}}/* {{.BUILD_DIR}}
 
   build-demo-fabric:
     desc: Build the default fabric only (no simulation)

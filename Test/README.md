@@ -24,10 +24,6 @@ switch-matrix config bits and the BEL config bits, not just the BEL RTL.
 | `npu_slice_loopback` | NPU_SLICE x8 (east, rows 1..16) | a different combination per slice | all slice outputs, two register stages |
 | `full_io` | all 18 IO BELs at once | EXT_PMOD bypass, NPU_CTRL skew on, the rest as above | every IO output of `eFPGA_top`; routing with all IO pins in use |
 
-`sequential_16bit_en_tb.v` is the original FABulous demo testbench. It uses
-the old user-IO tiles (`I_top`, `O_top`, ...), which no longer exist in this
-fabric, so it does not build any more.
-
 ## Running a test
 
 Prerequisites:
@@ -82,6 +78,9 @@ Each test is a user design `user_design/<DESIGN>.v`, a top wrapper
 task build-test-design run-simulation DESIGN=axi_m_loopback TOP_WRAPPER=axi_m_loopback_top
 task clean
 ```
+
+Without `DESIGN`/`TOP_WRAPPER`, `task` (alias of `fab-sim`) builds the fabric and runs
+`full_io`.
 
 `build-test-design` synthesizes, places and routes the design and writes the
 bitstream to `build/<DESIGN>.bin`/`.hex`; `run-simulation` compiles the fabric
@@ -142,7 +141,7 @@ those bits with a non-zero exit. Do the same after changing a test.
   (column `k+1`) is slice `k`.
 - **`MAX_BITBYTES`.** The bitstream is about 18 KB because the border rows
   carry configuration frames. `MAX_BITBYTES` (32768) must be the same in
-  `Taskfile.yml`, `Makefile` and every testbench's `localparam`; `makehex.py`
+  `Taskfile.yml` and every testbench's `localparam`; `makehex.py`
   aborts with an `AssertionError` when the bitstream outgrows it.
 - **Two files per design.** The Taskfile's synthesis reads both
   `<DESIGN>.v` and `<TOP_WRAPPER>.v`, so they must be different files.
