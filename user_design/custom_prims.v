@@ -1703,3 +1703,260 @@ module NPU_CTRL_CFG_BEL (
 );
     parameter TIE_OFF_SKEW_EN = 0;
 endmodule
+
+//Warning: The primitive NPU_ACCUM_SRAM_BEL was added by FABulous automatically.
+(* blackbox, keep *)
+module NPU_ACCUM_SRAM_BEL (
+    input FAB_ADDR0,
+    input FAB_ADDR1,
+    input FAB_ADDR2,
+    input FAB_ADDR3,
+    input FAB_ADDR4,
+    input FAB_ADDR5,
+    input FAB_ADDR6,
+    input FAB_ADDR7,
+    input FAB_WE0,
+    input FAB_WE1,
+    input FAB_WE2,
+    input FAB_WE3,
+    input FAB_WE4,
+    input FAB_WE5,
+    input FAB_WE6,
+    input FAB_WE7,
+    input FAB_WDATA0,
+    input FAB_WDATA1,
+    input FAB_WDATA2,
+    input FAB_WDATA3,
+    input FAB_WDATA4,
+    input FAB_WDATA5,
+    input FAB_WDATA6,
+    input FAB_WDATA7,
+    input FAB_WDATA8,
+    input FAB_WDATA9,
+    input FAB_WDATA10,
+    input FAB_WDATA11,
+    input FAB_WDATA12,
+    input FAB_WDATA13,
+    input FAB_WDATA14,
+    input FAB_WDATA15,
+    input FAB_WDATA16,
+    input FAB_WDATA17,
+    input FAB_WDATA18,
+    input FAB_WDATA19,
+    input FAB_WDATA20,
+    input FAB_WDATA21,
+    input FAB_WDATA22,
+    input FAB_WDATA23,
+    input FAB_WDATA24,
+    input FAB_WDATA25,
+    input FAB_WDATA26,
+    input FAB_WDATA27,
+    input FAB_WDATA28,
+    input FAB_WDATA29,
+    input FAB_WDATA30,
+    input FAB_WDATA31,
+    input FAB_READ_BANK_SEL0,
+    input FAB_READ_BANK_SEL1,
+    input FAB_READ_BANK_SEL2,
+    output FAB_RDATA0,
+    output FAB_RDATA1,
+    output FAB_RDATA2,
+    output FAB_RDATA3,
+    output FAB_RDATA4,
+    output FAB_RDATA5,
+    output FAB_RDATA6,
+    output FAB_RDATA7,
+    output FAB_RDATA8,
+    output FAB_RDATA9,
+    output FAB_RDATA10,
+    output FAB_RDATA11,
+    output FAB_RDATA12,
+    output FAB_RDATA13,
+    output FAB_RDATA14,
+    output FAB_RDATA15,
+    output FAB_RDATA16,
+    output FAB_RDATA17,
+    output FAB_RDATA18,
+    output FAB_RDATA19,
+    output FAB_RDATA20,
+    output FAB_RDATA21,
+    output FAB_RDATA22,
+    output FAB_RDATA23,
+    output FAB_RDATA24,
+    output FAB_RDATA25,
+    output FAB_RDATA26,
+    output FAB_RDATA27,
+    output FAB_RDATA28,
+    output FAB_RDATA29,
+    output FAB_RDATA30,
+    output FAB_RDATA31,
+    (* iopad_external_pin *)
+    input NPU_RDATA0,
+    (* iopad_external_pin *)
+    input NPU_RDATA1,
+    (* iopad_external_pin *)
+    input NPU_RDATA2,
+    (* iopad_external_pin *)
+    input NPU_RDATA3,
+    (* iopad_external_pin *)
+    input NPU_RDATA4,
+    (* iopad_external_pin *)
+    input NPU_RDATA5,
+    (* iopad_external_pin *)
+    input NPU_RDATA6,
+    (* iopad_external_pin *)
+    input NPU_RDATA7,
+    (* iopad_external_pin *)
+    input NPU_RDATA8,
+    (* iopad_external_pin *)
+    input NPU_RDATA9,
+    (* iopad_external_pin *)
+    input NPU_RDATA10,
+    (* iopad_external_pin *)
+    input NPU_RDATA11,
+    (* iopad_external_pin *)
+    input NPU_RDATA12,
+    (* iopad_external_pin *)
+    input NPU_RDATA13,
+    (* iopad_external_pin *)
+    input NPU_RDATA14,
+    (* iopad_external_pin *)
+    input NPU_RDATA15,
+    (* iopad_external_pin *)
+    input NPU_RDATA16,
+    (* iopad_external_pin *)
+    input NPU_RDATA17,
+    (* iopad_external_pin *)
+    input NPU_RDATA18,
+    (* iopad_external_pin *)
+    input NPU_RDATA19,
+    (* iopad_external_pin *)
+    input NPU_RDATA20,
+    (* iopad_external_pin *)
+    input NPU_RDATA21,
+    (* iopad_external_pin *)
+    input NPU_RDATA22,
+    (* iopad_external_pin *)
+    input NPU_RDATA23,
+    (* iopad_external_pin *)
+    input NPU_RDATA24,
+    (* iopad_external_pin *)
+    input NPU_RDATA25,
+    (* iopad_external_pin *)
+    input NPU_RDATA26,
+    (* iopad_external_pin *)
+    input NPU_RDATA27,
+    (* iopad_external_pin *)
+    input NPU_RDATA28,
+    (* iopad_external_pin *)
+    input NPU_RDATA29,
+    (* iopad_external_pin *)
+    input NPU_RDATA30,
+    (* iopad_external_pin *)
+    input NPU_RDATA31,
+    (* iopad_external_pin *)
+    output NPU_ADDR0,
+    (* iopad_external_pin *)
+    output NPU_ADDR1,
+    (* iopad_external_pin *)
+    output NPU_ADDR2,
+    (* iopad_external_pin *)
+    output NPU_ADDR3,
+    (* iopad_external_pin *)
+    output NPU_ADDR4,
+    (* iopad_external_pin *)
+    output NPU_ADDR5,
+    (* iopad_external_pin *)
+    output NPU_ADDR6,
+    (* iopad_external_pin *)
+    output NPU_ADDR7,
+    (* iopad_external_pin *)
+    output NPU_WE0,
+    (* iopad_external_pin *)
+    output NPU_WE1,
+    (* iopad_external_pin *)
+    output NPU_WE2,
+    (* iopad_external_pin *)
+    output NPU_WE3,
+    (* iopad_external_pin *)
+    output NPU_WE4,
+    (* iopad_external_pin *)
+    output NPU_WE5,
+    (* iopad_external_pin *)
+    output NPU_WE6,
+    (* iopad_external_pin *)
+    output NPU_WE7,
+    (* iopad_external_pin *)
+    output NPU_WDATA0,
+    (* iopad_external_pin *)
+    output NPU_WDATA1,
+    (* iopad_external_pin *)
+    output NPU_WDATA2,
+    (* iopad_external_pin *)
+    output NPU_WDATA3,
+    (* iopad_external_pin *)
+    output NPU_WDATA4,
+    (* iopad_external_pin *)
+    output NPU_WDATA5,
+    (* iopad_external_pin *)
+    output NPU_WDATA6,
+    (* iopad_external_pin *)
+    output NPU_WDATA7,
+    (* iopad_external_pin *)
+    output NPU_WDATA8,
+    (* iopad_external_pin *)
+    output NPU_WDATA9,
+    (* iopad_external_pin *)
+    output NPU_WDATA10,
+    (* iopad_external_pin *)
+    output NPU_WDATA11,
+    (* iopad_external_pin *)
+    output NPU_WDATA12,
+    (* iopad_external_pin *)
+    output NPU_WDATA13,
+    (* iopad_external_pin *)
+    output NPU_WDATA14,
+    (* iopad_external_pin *)
+    output NPU_WDATA15,
+    (* iopad_external_pin *)
+    output NPU_WDATA16,
+    (* iopad_external_pin *)
+    output NPU_WDATA17,
+    (* iopad_external_pin *)
+    output NPU_WDATA18,
+    (* iopad_external_pin *)
+    output NPU_WDATA19,
+    (* iopad_external_pin *)
+    output NPU_WDATA20,
+    (* iopad_external_pin *)
+    output NPU_WDATA21,
+    (* iopad_external_pin *)
+    output NPU_WDATA22,
+    (* iopad_external_pin *)
+    output NPU_WDATA23,
+    (* iopad_external_pin *)
+    output NPU_WDATA24,
+    (* iopad_external_pin *)
+    output NPU_WDATA25,
+    (* iopad_external_pin *)
+    output NPU_WDATA26,
+    (* iopad_external_pin *)
+    output NPU_WDATA27,
+    (* iopad_external_pin *)
+    output NPU_WDATA28,
+    (* iopad_external_pin *)
+    output NPU_WDATA29,
+    (* iopad_external_pin *)
+    output NPU_WDATA30,
+    (* iopad_external_pin *)
+    output NPU_WDATA31,
+    (* iopad_external_pin *)
+    output NPU_READ_BANK_SEL0,
+    (* iopad_external_pin *)
+    output NPU_READ_BANK_SEL1,
+    (* iopad_external_pin *)
+    output NPU_READ_BANK_SEL2,
+    input CLK
+);
+    parameter [7:0] WRITE_LOCK = 0;
+endmodule
