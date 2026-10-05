@@ -1,11 +1,11 @@
-module NPU_ACT_ROW
+module NPU_SLICE_1
     #(
 `ifdef EMULATION
         parameter [639:0] Emulate_Bitstream=640'b0,
 `endif
         parameter MaxFramesPerCol=20,
         parameter FrameBitsPerRow=32,
-        parameter NoConfigBits=276
+        parameter NoConfigBits=254
     )
     (
  //N
@@ -37,40 +37,9 @@ module NPU_ACT_ROW
         output  [7:0] S2BEG,        //TilePort({S} OUTPUT S2BEG[7:0])
         output  [7:0] S2BEGb,        //TilePort({S} OUTPUT S2BEGb[7:0])
         output  [15:0] S4BEG,        //TilePort({S} OUTPUT S4BEG[3:0])
-        input  NPU_ACT_RDATA0,
-        input  NPU_ACT_RDATA1,
-        input  NPU_ACT_RDATA2,
-        input  NPU_ACT_RDATA3,
-        input  NPU_ACT_RDATA4,
-        input  NPU_ACT_RDATA5,
-        input  NPU_ACT_RDATA6,
-        input  NPU_ACT_RDATA7,
-        output  NPU_ACT_WE,
-        output  NPU_ACT_ADDR0,
-        output  NPU_ACT_ADDR1,
-        output  NPU_ACT_ADDR2,
-        output  NPU_ACT_ADDR3,
-        output  NPU_ACT_ADDR4,
-        output  NPU_ACT_ADDR5,
-        output  NPU_ACT_ADDR6,
-        output  NPU_ACT_ADDR7,
-        output  NPU_ACT_ADDR8,
-        output  NPU_ACT_WDATA0,
-        output  NPU_ACT_WDATA1,
-        output  NPU_ACT_WDATA2,
-        output  NPU_ACT_WDATA3,
-        output  NPU_ACT_WDATA4,
-        output  NPU_ACT_WDATA5,
-        output  NPU_ACT_WDATA6,
-        output  NPU_ACT_WDATA7,
-        output  NPU_WEIGHT_IN0,
-        output  NPU_WEIGHT_IN1,
-        output  NPU_WEIGHT_IN2,
-        output  NPU_WEIGHT_IN3,
-        output  NPU_WEIGHT_IN4,
-        output  NPU_WEIGHT_IN5,
-        output  NPU_WEIGHT_IN6,
-        output  NPU_WEIGHT_IN7,
+    //SJUMP ports (supertile BEL interface)
+        output  [15-1:0] BASE_TO_TOP,
+        input  [8-1:0] TOP_TO_BASE,
     //Tile IO ports from BELs
         input  UserCLK,
         output  UserCLKo,
@@ -82,40 +51,6 @@ module NPU_ACT_ROW
 );
  //signal declarations
  //BEL ports (e.g., slices)
-wire FAB_ACT_WE;
-wire FAB_ACT_ADDR0;
-wire FAB_ACT_ADDR1;
-wire FAB_ACT_ADDR2;
-wire FAB_ACT_ADDR3;
-wire FAB_ACT_ADDR4;
-wire FAB_ACT_ADDR5;
-wire FAB_ACT_ADDR6;
-wire FAB_ACT_ADDR7;
-wire FAB_ACT_ADDR8;
-wire FAB_ACT_WDATA0;
-wire FAB_ACT_WDATA1;
-wire FAB_ACT_WDATA2;
-wire FAB_ACT_WDATA3;
-wire FAB_ACT_WDATA4;
-wire FAB_ACT_WDATA5;
-wire FAB_ACT_WDATA6;
-wire FAB_ACT_WDATA7;
-wire FAB_WEIGHT_IN0;
-wire FAB_WEIGHT_IN1;
-wire FAB_WEIGHT_IN2;
-wire FAB_WEIGHT_IN3;
-wire FAB_WEIGHT_IN4;
-wire FAB_WEIGHT_IN5;
-wire FAB_WEIGHT_IN6;
-wire FAB_WEIGHT_IN7;
-wire FAB_ACT_RDATA0;
-wire FAB_ACT_RDATA1;
-wire FAB_ACT_RDATA2;
-wire FAB_ACT_RDATA3;
-wire FAB_ACT_RDATA4;
-wire FAB_ACT_RDATA5;
-wire FAB_ACT_RDATA6;
-wire FAB_ACT_RDATA7;
  //Jump wires
 wire[16-1:0] J_NS4_BEG;
 wire[8-1:0] J_NS2_BEG;
@@ -909,13 +844,13 @@ clk_buf inst_clk_buf (
 
 
  //configuration storage latches
-NPU_ACT_ROW_ConfigMem
+NPU_SLICE_1_ConfigMem
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(Emulate_Bitstream)
     )
 `endif
-    Inst_NPU_ACT_ROW_ConfigMem
+    Inst_NPU_SLICE_1_ConfigMem
     (
     .FrameData(FrameData),
     .FrameStrobe(FrameStrobe),
@@ -923,22 +858,7 @@ NPU_ACT_ROW_ConfigMem
     .ConfigBits_N(ConfigBits_N)
 );
 
-
- //BEL component instantiations
-NPU_ACT_ROW_BEL Inst_NPU_ACT_ROW_BEL (
-    .FAB_ACT_WE(FAB_ACT_WE),
-    .FAB_ACT_ADDR({FAB_ACT_ADDR8, FAB_ACT_ADDR7, FAB_ACT_ADDR6, FAB_ACT_ADDR5, FAB_ACT_ADDR4, FAB_ACT_ADDR3, FAB_ACT_ADDR2, FAB_ACT_ADDR1, FAB_ACT_ADDR0}),
-    .FAB_ACT_WDATA({FAB_ACT_WDATA7, FAB_ACT_WDATA6, FAB_ACT_WDATA5, FAB_ACT_WDATA4, FAB_ACT_WDATA3, FAB_ACT_WDATA2, FAB_ACT_WDATA1, FAB_ACT_WDATA0}),
-    .FAB_ACT_RDATA({FAB_ACT_RDATA7, FAB_ACT_RDATA6, FAB_ACT_RDATA5, FAB_ACT_RDATA4, FAB_ACT_RDATA3, FAB_ACT_RDATA2, FAB_ACT_RDATA1, FAB_ACT_RDATA0}),
-    .FAB_WEIGHT_IN({FAB_WEIGHT_IN7, FAB_WEIGHT_IN6, FAB_WEIGHT_IN5, FAB_WEIGHT_IN4, FAB_WEIGHT_IN3, FAB_WEIGHT_IN2, FAB_WEIGHT_IN1, FAB_WEIGHT_IN0}),
-    .NPU_ACT_WE(NPU_ACT_WE),
-    .NPU_ACT_ADDR({NPU_ACT_ADDR8, NPU_ACT_ADDR7, NPU_ACT_ADDR6, NPU_ACT_ADDR5, NPU_ACT_ADDR4, NPU_ACT_ADDR3, NPU_ACT_ADDR2, NPU_ACT_ADDR1, NPU_ACT_ADDR0}),
-    .NPU_ACT_WDATA({NPU_ACT_WDATA7, NPU_ACT_WDATA6, NPU_ACT_WDATA5, NPU_ACT_WDATA4, NPU_ACT_WDATA3, NPU_ACT_WDATA2, NPU_ACT_WDATA1, NPU_ACT_WDATA0}),
-    .NPU_ACT_RDATA({NPU_ACT_RDATA7, NPU_ACT_RDATA6, NPU_ACT_RDATA5, NPU_ACT_RDATA4, NPU_ACT_RDATA3, NPU_ACT_RDATA2, NPU_ACT_RDATA1, NPU_ACT_RDATA0}),
-    .NPU_WEIGHT_IN({NPU_WEIGHT_IN7, NPU_WEIGHT_IN6, NPU_WEIGHT_IN5, NPU_WEIGHT_IN4, NPU_WEIGHT_IN3, NPU_WEIGHT_IN2, NPU_WEIGHT_IN1, NPU_WEIGHT_IN0})
-);
-
-NPU_ACT_ROW_switch_matrix Inst_NPU_ACT_ROW_switch_matrix (
+NPU_SLICE_1_switch_matrix Inst_NPU_SLICE_1_switch_matrix (
     .N1END0(N1END[0]),
     .N1END1(N1END[1]),
     .N1END2(N1END[2]),
@@ -1035,14 +955,6 @@ NPU_ACT_ROW_switch_matrix Inst_NPU_ACT_ROW_switch_matrix (
     .S4END1(S4END[1]),
     .S4END2(S4END[2]),
     .S4END3(S4END[3]),
-    .FAB_ACT_RDATA0(FAB_ACT_RDATA0),
-    .FAB_ACT_RDATA1(FAB_ACT_RDATA1),
-    .FAB_ACT_RDATA2(FAB_ACT_RDATA2),
-    .FAB_ACT_RDATA3(FAB_ACT_RDATA3),
-    .FAB_ACT_RDATA4(FAB_ACT_RDATA4),
-    .FAB_ACT_RDATA5(FAB_ACT_RDATA5),
-    .FAB_ACT_RDATA6(FAB_ACT_RDATA6),
-    .FAB_ACT_RDATA7(FAB_ACT_RDATA7),
     .J_NS4_END0(J_NS4_BEG[0]),
     .J_NS4_END1(J_NS4_BEG[1]),
     .J_NS4_END2(J_NS4_BEG[2]),
@@ -1167,32 +1079,6 @@ NPU_ACT_ROW_switch_matrix Inst_NPU_ACT_ROW_switch_matrix (
     .W6BEG9(W6BEG[9]),
     .W6BEG10(W6BEG[10]),
     .W6BEG11(W6BEG[11]),
-    .FAB_ACT_WE(FAB_ACT_WE),
-    .FAB_ACT_ADDR0(FAB_ACT_ADDR0),
-    .FAB_ACT_ADDR1(FAB_ACT_ADDR1),
-    .FAB_ACT_ADDR2(FAB_ACT_ADDR2),
-    .FAB_ACT_ADDR3(FAB_ACT_ADDR3),
-    .FAB_ACT_ADDR4(FAB_ACT_ADDR4),
-    .FAB_ACT_ADDR5(FAB_ACT_ADDR5),
-    .FAB_ACT_ADDR6(FAB_ACT_ADDR6),
-    .FAB_ACT_ADDR7(FAB_ACT_ADDR7),
-    .FAB_ACT_ADDR8(FAB_ACT_ADDR8),
-    .FAB_ACT_WDATA0(FAB_ACT_WDATA0),
-    .FAB_ACT_WDATA1(FAB_ACT_WDATA1),
-    .FAB_ACT_WDATA2(FAB_ACT_WDATA2),
-    .FAB_ACT_WDATA3(FAB_ACT_WDATA3),
-    .FAB_ACT_WDATA4(FAB_ACT_WDATA4),
-    .FAB_ACT_WDATA5(FAB_ACT_WDATA5),
-    .FAB_ACT_WDATA6(FAB_ACT_WDATA6),
-    .FAB_ACT_WDATA7(FAB_ACT_WDATA7),
-    .FAB_WEIGHT_IN0(FAB_WEIGHT_IN0),
-    .FAB_WEIGHT_IN1(FAB_WEIGHT_IN1),
-    .FAB_WEIGHT_IN2(FAB_WEIGHT_IN2),
-    .FAB_WEIGHT_IN3(FAB_WEIGHT_IN3),
-    .FAB_WEIGHT_IN4(FAB_WEIGHT_IN4),
-    .FAB_WEIGHT_IN5(FAB_WEIGHT_IN5),
-    .FAB_WEIGHT_IN6(FAB_WEIGHT_IN6),
-    .FAB_WEIGHT_IN7(FAB_WEIGHT_IN7),
     .J_NS4_BEG0(J_NS4_BEG[0]),
     .J_NS4_BEG1(J_NS4_BEG[1]),
     .J_NS4_BEG2(J_NS4_BEG[2]),
@@ -1221,8 +1107,31 @@ NPU_ACT_ROW_switch_matrix Inst_NPU_ACT_ROW_switch_matrix (
     .J_NS1_BEG1(J_NS1_BEG[1]),
     .J_NS1_BEG2(J_NS1_BEG[2]),
     .J_NS1_BEG3(J_NS1_BEG[3]),
-    .ConfigBits(ConfigBits[276-1:0]),
-    .ConfigBits_N(ConfigBits_N[276-1:0])
+    .BASE_TO_TOP0(BASE_TO_TOP[0]),
+    .BASE_TO_TOP1(BASE_TO_TOP[1]),
+    .BASE_TO_TOP2(BASE_TO_TOP[2]),
+    .BASE_TO_TOP3(BASE_TO_TOP[3]),
+    .BASE_TO_TOP4(BASE_TO_TOP[4]),
+    .BASE_TO_TOP5(BASE_TO_TOP[5]),
+    .BASE_TO_TOP6(BASE_TO_TOP[6]),
+    .BASE_TO_TOP7(BASE_TO_TOP[7]),
+    .BASE_TO_TOP8(BASE_TO_TOP[8]),
+    .BASE_TO_TOP9(BASE_TO_TOP[9]),
+    .BASE_TO_TOP10(BASE_TO_TOP[10]),
+    .BASE_TO_TOP11(BASE_TO_TOP[11]),
+    .BASE_TO_TOP12(BASE_TO_TOP[12]),
+    .BASE_TO_TOP13(BASE_TO_TOP[13]),
+    .BASE_TO_TOP14(BASE_TO_TOP[14]),
+    .TOP_TO_BASE0(TOP_TO_BASE[0]),
+    .TOP_TO_BASE1(TOP_TO_BASE[1]),
+    .TOP_TO_BASE2(TOP_TO_BASE[2]),
+    .TOP_TO_BASE3(TOP_TO_BASE[3]),
+    .TOP_TO_BASE4(TOP_TO_BASE[4]),
+    .TOP_TO_BASE5(TOP_TO_BASE[5]),
+    .TOP_TO_BASE6(TOP_TO_BASE[6]),
+    .TOP_TO_BASE7(TOP_TO_BASE[7]),
+    .ConfigBits(ConfigBits[254-1:0]),
+    .ConfigBits_N(ConfigBits_N[254-1:0])
 );
 
 endmodule
