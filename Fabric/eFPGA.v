@@ -4,86 +4,6 @@ module eFPGA
         parameter FrameBitsPerRow=32
     )
     (
-        input  Tile_X1Y0_UIO_TOP_UIN0, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN1, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN2, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN3, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN4, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN5, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN6, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN7, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN8, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN9, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN10, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN11, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN12, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN13, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN14, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN15, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN16, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN17, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN18, //EXTERNAL
-        input  Tile_X1Y0_UIO_TOP_UIN19, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT0, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT1, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT2, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT3, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT4, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT5, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT6, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT7, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT8, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT9, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT10, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT11, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT12, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT13, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT14, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT15, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT16, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT17, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT18, //EXTERNAL
-        output  Tile_X1Y0_UIO_TOP_UOUT19, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN0, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN1, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN2, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN3, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN4, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN5, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN6, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN7, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN8, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN9, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN10, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN11, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN12, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN13, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN14, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN15, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN16, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN17, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN18, //EXTERNAL
-        input  Tile_X2Y0_UIO_TOP_UIN19, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT0, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT1, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT2, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT3, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT4, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT5, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT6, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT7, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT8, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT9, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT10, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT11, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT12, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT13, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT14, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT15, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT16, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT17, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT18, //EXTERNAL
-        output  Tile_X2Y0_UIO_TOP_UOUT19, //EXTERNAL
         input  Tile_X3Y0_UIO_TOP_UIN0, //EXTERNAL
         input  Tile_X3Y0_UIO_TOP_UIN1, //EXTERNAL
         input  Tile_X3Y0_UIO_TOP_UIN2, //EXTERNAL
@@ -1420,6 +1340,30 @@ module eFPGA
         output  Tile_X0Y11_AXIL_S_SOC_RRESP0, //EXTERNAL
         output  Tile_X0Y11_AXIL_S_SOC_RRESP1, //EXTERNAL
         output  Tile_X0Y11_AXIL_S_SOC_RVALID, //EXTERNAL
+        input  Tile_X1Y0_PMOD_IO_I0, //EXTERNAL
+        input  Tile_X1Y0_PMOD_IO_I1, //EXTERNAL
+        input  Tile_X1Y0_PMOD_IO_I2, //EXTERNAL
+        input  Tile_X1Y0_PMOD_IO_I3, //EXTERNAL
+        input  Tile_X1Y0_PMOD_IO_I4, //EXTERNAL
+        input  Tile_X1Y0_PMOD_IO_I5, //EXTERNAL
+        input  Tile_X1Y0_PMOD_IO_I6, //EXTERNAL
+        input  Tile_X1Y0_PMOD_IO_I7, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_O0, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_O1, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_O2, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_O3, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_O4, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_O5, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_O6, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_O7, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_OE_O0, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_OE_O1, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_OE_O2, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_OE_O3, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_OE_O4, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_OE_O5, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_OE_O6, //EXTERNAL
+        output  Tile_X1Y0_PMOD_IO_OE_O7, //EXTERNAL
         input  Tile_X7Y0_NPU_RDATA0, //EXTERNAL
         input  Tile_X7Y0_NPU_RDATA1, //EXTERNAL
         input  Tile_X7Y0_NPU_RDATA2, //EXTERNAL
@@ -6240,126 +6184,61 @@ assign Column_X11_FrameStrobe = FrameStrobe[MaxFramesPerCol*(11+1)-1:MaxFramesPe
 
 
  //tile IO port will get directly connected to top-level tile module
-(* keep *) N_IO Tile_X1Y0_N_IO (
-    .N1END(Tile_X1Y1_N1BEG),
-    .N2MID(Tile_X1Y1_N2BEG),
-    .N2END(Tile_X1Y1_N2BEGb),
-    .N4END(Tile_X1Y1_N4BEG),
-    .NN4END(Tile_X1Y1_NN4BEG),
-    .Ci(Tile_X1Y1_Co),
-    .S1BEG(Tile_X1Y0_S1BEG),
-    .S2BEG(Tile_X1Y0_S2BEG),
-    .S2BEGb(Tile_X1Y0_S2BEGb),
-    .S4BEG(Tile_X1Y0_S4BEG),
-    .SS4BEG(Tile_X1Y0_SS4BEG),
-    .UIO_TOP_UIN0(Tile_X1Y0_UIO_TOP_UIN0),
-    .UIO_TOP_UIN1(Tile_X1Y0_UIO_TOP_UIN1),
-    .UIO_TOP_UIN2(Tile_X1Y0_UIO_TOP_UIN2),
-    .UIO_TOP_UIN3(Tile_X1Y0_UIO_TOP_UIN3),
-    .UIO_TOP_UIN4(Tile_X1Y0_UIO_TOP_UIN4),
-    .UIO_TOP_UIN5(Tile_X1Y0_UIO_TOP_UIN5),
-    .UIO_TOP_UIN6(Tile_X1Y0_UIO_TOP_UIN6),
-    .UIO_TOP_UIN7(Tile_X1Y0_UIO_TOP_UIN7),
-    .UIO_TOP_UIN8(Tile_X1Y0_UIO_TOP_UIN8),
-    .UIO_TOP_UIN9(Tile_X1Y0_UIO_TOP_UIN9),
-    .UIO_TOP_UIN10(Tile_X1Y0_UIO_TOP_UIN10),
-    .UIO_TOP_UIN11(Tile_X1Y0_UIO_TOP_UIN11),
-    .UIO_TOP_UIN12(Tile_X1Y0_UIO_TOP_UIN12),
-    .UIO_TOP_UIN13(Tile_X1Y0_UIO_TOP_UIN13),
-    .UIO_TOP_UIN14(Tile_X1Y0_UIO_TOP_UIN14),
-    .UIO_TOP_UIN15(Tile_X1Y0_UIO_TOP_UIN15),
-    .UIO_TOP_UIN16(Tile_X1Y0_UIO_TOP_UIN16),
-    .UIO_TOP_UIN17(Tile_X1Y0_UIO_TOP_UIN17),
-    .UIO_TOP_UIN18(Tile_X1Y0_UIO_TOP_UIN18),
-    .UIO_TOP_UIN19(Tile_X1Y0_UIO_TOP_UIN19),
-    .UIO_TOP_UOUT0(Tile_X1Y0_UIO_TOP_UOUT0),
-    .UIO_TOP_UOUT1(Tile_X1Y0_UIO_TOP_UOUT1),
-    .UIO_TOP_UOUT2(Tile_X1Y0_UIO_TOP_UOUT2),
-    .UIO_TOP_UOUT3(Tile_X1Y0_UIO_TOP_UOUT3),
-    .UIO_TOP_UOUT4(Tile_X1Y0_UIO_TOP_UOUT4),
-    .UIO_TOP_UOUT5(Tile_X1Y0_UIO_TOP_UOUT5),
-    .UIO_TOP_UOUT6(Tile_X1Y0_UIO_TOP_UOUT6),
-    .UIO_TOP_UOUT7(Tile_X1Y0_UIO_TOP_UOUT7),
-    .UIO_TOP_UOUT8(Tile_X1Y0_UIO_TOP_UOUT8),
-    .UIO_TOP_UOUT9(Tile_X1Y0_UIO_TOP_UOUT9),
-    .UIO_TOP_UOUT10(Tile_X1Y0_UIO_TOP_UOUT10),
-    .UIO_TOP_UOUT11(Tile_X1Y0_UIO_TOP_UOUT11),
-    .UIO_TOP_UOUT12(Tile_X1Y0_UIO_TOP_UOUT12),
-    .UIO_TOP_UOUT13(Tile_X1Y0_UIO_TOP_UOUT13),
-    .UIO_TOP_UOUT14(Tile_X1Y0_UIO_TOP_UOUT14),
-    .UIO_TOP_UOUT15(Tile_X1Y0_UIO_TOP_UOUT15),
-    .UIO_TOP_UOUT16(Tile_X1Y0_UIO_TOP_UOUT16),
-    .UIO_TOP_UOUT17(Tile_X1Y0_UIO_TOP_UOUT17),
-    .UIO_TOP_UOUT18(Tile_X1Y0_UIO_TOP_UOUT18),
-    .UIO_TOP_UOUT19(Tile_X1Y0_UIO_TOP_UOUT19),
-    .UserCLK(Tile_X0Y0_UserCLKo),
-    .UserCLKo(Tile_X1Y0_UserCLKo),
-    .FrameData(Tile_X0Y0_FrameData_O),
-    .FrameData_O(Tile_X1Y0_FrameData_O),
-    .FrameStrobe(Tile_X1Y1_FrameStrobe_O),
-    .FrameStrobe_O(Tile_X1Y0_FrameStrobe_O)
-);
-
-
- //tile IO port will get directly connected to top-level tile module
-(* keep *) N_IO Tile_X2Y0_N_IO (
-    .N1END(Tile_X2Y1_N1BEG),
-    .N2MID(Tile_X2Y1_N2BEG),
-    .N2END(Tile_X2Y1_N2BEGb),
-    .N4END(Tile_X2Y1_N4BEG),
-    .NN4END(Tile_X2Y1_NN4BEG),
-    .Ci(Tile_X2Y1_Co),
-    .S1BEG(Tile_X2Y0_S1BEG),
-    .S2BEG(Tile_X2Y0_S2BEG),
-    .S2BEGb(Tile_X2Y0_S2BEGb),
-    .S4BEG(Tile_X2Y0_S4BEG),
-    .SS4BEG(Tile_X2Y0_SS4BEG),
-    .UIO_TOP_UIN0(Tile_X2Y0_UIO_TOP_UIN0),
-    .UIO_TOP_UIN1(Tile_X2Y0_UIO_TOP_UIN1),
-    .UIO_TOP_UIN2(Tile_X2Y0_UIO_TOP_UIN2),
-    .UIO_TOP_UIN3(Tile_X2Y0_UIO_TOP_UIN3),
-    .UIO_TOP_UIN4(Tile_X2Y0_UIO_TOP_UIN4),
-    .UIO_TOP_UIN5(Tile_X2Y0_UIO_TOP_UIN5),
-    .UIO_TOP_UIN6(Tile_X2Y0_UIO_TOP_UIN6),
-    .UIO_TOP_UIN7(Tile_X2Y0_UIO_TOP_UIN7),
-    .UIO_TOP_UIN8(Tile_X2Y0_UIO_TOP_UIN8),
-    .UIO_TOP_UIN9(Tile_X2Y0_UIO_TOP_UIN9),
-    .UIO_TOP_UIN10(Tile_X2Y0_UIO_TOP_UIN10),
-    .UIO_TOP_UIN11(Tile_X2Y0_UIO_TOP_UIN11),
-    .UIO_TOP_UIN12(Tile_X2Y0_UIO_TOP_UIN12),
-    .UIO_TOP_UIN13(Tile_X2Y0_UIO_TOP_UIN13),
-    .UIO_TOP_UIN14(Tile_X2Y0_UIO_TOP_UIN14),
-    .UIO_TOP_UIN15(Tile_X2Y0_UIO_TOP_UIN15),
-    .UIO_TOP_UIN16(Tile_X2Y0_UIO_TOP_UIN16),
-    .UIO_TOP_UIN17(Tile_X2Y0_UIO_TOP_UIN17),
-    .UIO_TOP_UIN18(Tile_X2Y0_UIO_TOP_UIN18),
-    .UIO_TOP_UIN19(Tile_X2Y0_UIO_TOP_UIN19),
-    .UIO_TOP_UOUT0(Tile_X2Y0_UIO_TOP_UOUT0),
-    .UIO_TOP_UOUT1(Tile_X2Y0_UIO_TOP_UOUT1),
-    .UIO_TOP_UOUT2(Tile_X2Y0_UIO_TOP_UOUT2),
-    .UIO_TOP_UOUT3(Tile_X2Y0_UIO_TOP_UOUT3),
-    .UIO_TOP_UOUT4(Tile_X2Y0_UIO_TOP_UOUT4),
-    .UIO_TOP_UOUT5(Tile_X2Y0_UIO_TOP_UOUT5),
-    .UIO_TOP_UOUT6(Tile_X2Y0_UIO_TOP_UOUT6),
-    .UIO_TOP_UOUT7(Tile_X2Y0_UIO_TOP_UOUT7),
-    .UIO_TOP_UOUT8(Tile_X2Y0_UIO_TOP_UOUT8),
-    .UIO_TOP_UOUT9(Tile_X2Y0_UIO_TOP_UOUT9),
-    .UIO_TOP_UOUT10(Tile_X2Y0_UIO_TOP_UOUT10),
-    .UIO_TOP_UOUT11(Tile_X2Y0_UIO_TOP_UOUT11),
-    .UIO_TOP_UOUT12(Tile_X2Y0_UIO_TOP_UOUT12),
-    .UIO_TOP_UOUT13(Tile_X2Y0_UIO_TOP_UOUT13),
-    .UIO_TOP_UOUT14(Tile_X2Y0_UIO_TOP_UOUT14),
-    .UIO_TOP_UOUT15(Tile_X2Y0_UIO_TOP_UOUT15),
-    .UIO_TOP_UOUT16(Tile_X2Y0_UIO_TOP_UOUT16),
-    .UIO_TOP_UOUT17(Tile_X2Y0_UIO_TOP_UOUT17),
-    .UIO_TOP_UOUT18(Tile_X2Y0_UIO_TOP_UOUT18),
-    .UIO_TOP_UOUT19(Tile_X2Y0_UIO_TOP_UOUT19),
-    .UserCLK(Tile_X1Y0_UserCLKo),
-    .UserCLKo(Tile_X2Y0_UserCLKo),
-    .FrameData(Tile_X1Y0_FrameData_O),
-    .FrameData_O(Tile_X2Y0_FrameData_O),
-    .FrameStrobe(Tile_X2Y1_FrameStrobe_O),
-    .FrameStrobe_O(Tile_X2Y0_FrameStrobe_O)
+(* keep *) EXT_PMOD Tile_X1Y0_EXT_PMOD (
+    .Tile_X0Y0_N1END(Tile_X1Y1_N1BEG),
+    .Tile_X0Y0_N2MID(Tile_X1Y1_N2BEG),
+    .Tile_X0Y0_N2END(Tile_X1Y1_N2BEGb),
+    .Tile_X0Y0_N4END(Tile_X1Y1_N4BEG),
+    .Tile_X0Y0_NN4END(Tile_X1Y1_NN4BEG),
+    .Tile_X0Y0_Ci(Tile_X1Y1_Co),
+    .Tile_X1Y0_N1END(Tile_X2Y1_N1BEG),
+    .Tile_X1Y0_N2MID(Tile_X2Y1_N2BEG),
+    .Tile_X1Y0_N2END(Tile_X2Y1_N2BEGb),
+    .Tile_X1Y0_N4END(Tile_X2Y1_N4BEG),
+    .Tile_X1Y0_NN4END(Tile_X2Y1_NN4BEG),
+    .Tile_X1Y0_Ci(Tile_X2Y1_Co),
+    .Tile_X0Y0_S1BEG(Tile_X1Y0_S1BEG),
+    .Tile_X0Y0_S2BEG(Tile_X1Y0_S2BEG),
+    .Tile_X0Y0_S2BEGb(Tile_X1Y0_S2BEGb),
+    .Tile_X0Y0_S4BEG(Tile_X1Y0_S4BEG),
+    .Tile_X0Y0_SS4BEG(Tile_X1Y0_SS4BEG),
+    .Tile_X1Y0_S1BEG(Tile_X2Y0_S1BEG),
+    .Tile_X1Y0_S2BEG(Tile_X2Y0_S2BEG),
+    .Tile_X1Y0_S2BEGb(Tile_X2Y0_S2BEGb),
+    .Tile_X1Y0_S4BEG(Tile_X2Y0_S4BEG),
+    .Tile_X1Y0_SS4BEG(Tile_X2Y0_SS4BEG),
+    .PMOD_IO_I0(Tile_X1Y0_PMOD_IO_I0),
+    .PMOD_IO_I1(Tile_X1Y0_PMOD_IO_I1),
+    .PMOD_IO_I2(Tile_X1Y0_PMOD_IO_I2),
+    .PMOD_IO_I3(Tile_X1Y0_PMOD_IO_I3),
+    .PMOD_IO_I4(Tile_X1Y0_PMOD_IO_I4),
+    .PMOD_IO_I5(Tile_X1Y0_PMOD_IO_I5),
+    .PMOD_IO_I6(Tile_X1Y0_PMOD_IO_I6),
+    .PMOD_IO_I7(Tile_X1Y0_PMOD_IO_I7),
+    .PMOD_IO_O0(Tile_X1Y0_PMOD_IO_O0),
+    .PMOD_IO_O1(Tile_X1Y0_PMOD_IO_O1),
+    .PMOD_IO_O2(Tile_X1Y0_PMOD_IO_O2),
+    .PMOD_IO_O3(Tile_X1Y0_PMOD_IO_O3),
+    .PMOD_IO_O4(Tile_X1Y0_PMOD_IO_O4),
+    .PMOD_IO_O5(Tile_X1Y0_PMOD_IO_O5),
+    .PMOD_IO_O6(Tile_X1Y0_PMOD_IO_O6),
+    .PMOD_IO_O7(Tile_X1Y0_PMOD_IO_O7),
+    .PMOD_IO_OE_O0(Tile_X1Y0_PMOD_IO_OE_O0),
+    .PMOD_IO_OE_O1(Tile_X1Y0_PMOD_IO_OE_O1),
+    .PMOD_IO_OE_O2(Tile_X1Y0_PMOD_IO_OE_O2),
+    .PMOD_IO_OE_O3(Tile_X1Y0_PMOD_IO_OE_O3),
+    .PMOD_IO_OE_O4(Tile_X1Y0_PMOD_IO_OE_O4),
+    .PMOD_IO_OE_O5(Tile_X1Y0_PMOD_IO_OE_O5),
+    .PMOD_IO_OE_O6(Tile_X1Y0_PMOD_IO_OE_O6),
+    .PMOD_IO_OE_O7(Tile_X1Y0_PMOD_IO_OE_O7),
+    .Tile_X0Y0_UserCLK(Tile_X0Y0_UserCLKo),
+    .Tile_X1Y0_UserCLKo(Tile_X2Y0_UserCLKo),
+    .Tile_X0Y0_FrameData(Tile_X0Y0_FrameData_O),
+    .Tile_X0Y0_FrameStrobe(Tile_X1Y1_FrameStrobe_O),
+    .Tile_X0Y0_FrameStrobe_O(Tile_X1Y0_FrameStrobe_O),
+    .Tile_X1Y0_FrameData_O(Tile_X2Y0_FrameData_O),
+    .Tile_X1Y0_FrameStrobe(Tile_X2Y1_FrameStrobe_O),
+    .Tile_X1Y0_FrameStrobe_O(Tile_X2Y0_FrameStrobe_O)
 );
 
 

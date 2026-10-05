@@ -1499,3 +1499,88 @@ module SOC_DEBUG_CTRL_BEL (
     parameter BYPASS_RST = 0;
     parameter BYPASS_IRQ = 0;
 endmodule
+
+//Warning: The primitive EXT_PMOD_BEL was added by FABulous automatically.
+(* blackbox, keep *)
+module EXT_PMOD_BEL (
+    input FAB_PMOD_O0,
+    input FAB_PMOD_O1,
+    input FAB_PMOD_O2,
+    input FAB_PMOD_O3,
+    input FAB_PMOD_O4,
+    input FAB_PMOD_O5,
+    input FAB_PMOD_O6,
+    input FAB_PMOD_O7,
+    input FAB_PMOD_OE0,
+    input FAB_PMOD_OE1,
+    input FAB_PMOD_OE2,
+    input FAB_PMOD_OE3,
+    input FAB_PMOD_OE4,
+    input FAB_PMOD_OE5,
+    input FAB_PMOD_OE6,
+    input FAB_PMOD_OE7,
+    output FAB_PMOD_I0,
+    output FAB_PMOD_I1,
+    output FAB_PMOD_I2,
+    output FAB_PMOD_I3,
+    output FAB_PMOD_I4,
+    output FAB_PMOD_I5,
+    output FAB_PMOD_I6,
+    output FAB_PMOD_I7,
+    (* iopad_external_pin *)
+    input PMOD_IO_I0,
+    (* iopad_external_pin *)
+    input PMOD_IO_I1,
+    (* iopad_external_pin *)
+    input PMOD_IO_I2,
+    (* iopad_external_pin *)
+    input PMOD_IO_I3,
+    (* iopad_external_pin *)
+    input PMOD_IO_I4,
+    (* iopad_external_pin *)
+    input PMOD_IO_I5,
+    (* iopad_external_pin *)
+    input PMOD_IO_I6,
+    (* iopad_external_pin *)
+    input PMOD_IO_I7,
+    (* iopad_external_pin *)
+    output PMOD_IO_O0,
+    (* iopad_external_pin *)
+    output PMOD_IO_O1,
+    (* iopad_external_pin *)
+    output PMOD_IO_O2,
+    (* iopad_external_pin *)
+    output PMOD_IO_O3,
+    (* iopad_external_pin *)
+    output PMOD_IO_O4,
+    (* iopad_external_pin *)
+    output PMOD_IO_O5,
+    (* iopad_external_pin *)
+    output PMOD_IO_O6,
+    (* iopad_external_pin *)
+    output PMOD_IO_O7,
+    (* iopad_external_pin *)
+    output PMOD_IO_OE_O0,
+    (* iopad_external_pin *)
+    output PMOD_IO_OE_O1,
+    (* iopad_external_pin *)
+    output PMOD_IO_OE_O2,
+    (* iopad_external_pin *)
+    output PMOD_IO_OE_O3,
+    (* iopad_external_pin *)
+    output PMOD_IO_OE_O4,
+    (* iopad_external_pin *)
+    output PMOD_IO_OE_O5,
+    (* iopad_external_pin *)
+    output PMOD_IO_OE_O6,
+    (* iopad_external_pin *)
+    output PMOD_IO_OE_O7,
+    input CLK
+);
+    parameter BYPASS_IN_REG = 0;
+    parameter BYPASS_OUT_REG = 0;
+    parameter TIE_OFF_OE = 0;
+    parameter [7:0] STATIC_OE = 0;
+    parameter OPEN_DRAIN_EN = 0;
+    parameter LOOPBACK_EN = 0;
+endmodule
