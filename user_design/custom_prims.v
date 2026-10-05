@@ -1584,3 +1584,122 @@ module EXT_PMOD_BEL (
     parameter OPEN_DRAIN_EN = 0;
     parameter LOOPBACK_EN = 0;
 endmodule
+
+//Warning: The primitive NPU_CTRL_CFG_BEL was added by FABulous automatically.
+(* blackbox, keep *)
+module NPU_CTRL_CFG_BEL (
+    input FAB_QUANT_SHIFT_IN0,
+    input FAB_QUANT_SHIFT_IN1,
+    input FAB_QUANT_SHIFT_IN2,
+    input FAB_QUANT_SHIFT_IN3,
+    input FAB_QUANT_SHIFT_IN4,
+    input FAB_QUANT_SHIFT_IN5,
+    input FAB_QUANT_SHIFT_IN6,
+    input FAB_QUANT_SHIFT_IN7,
+    input FAB_QUANT_SHIFT_IN8,
+    input FAB_QUANT_SHIFT_IN9,
+    input FAB_QUANT_SHIFT_IN10,
+    input FAB_QUANT_SHIFT_IN11,
+    input FAB_QUANT_SHIFT_IN12,
+    input FAB_QUANT_SHIFT_IN13,
+    input FAB_QUANT_SHIFT_IN14,
+    input FAB_QUANT_SHIFT_IN15,
+    input FAB_QUANT_SHIFT_IN16,
+    input FAB_QUANT_SHIFT_IN17,
+    input FAB_QUANT_SHIFT_IN18,
+    input FAB_QUANT_SHIFT_IN19,
+    input FAB_QUANT_SHIFT_IN20,
+    input FAB_QUANT_SHIFT_IN21,
+    input FAB_QUANT_SHIFT_IN22,
+    input FAB_QUANT_SHIFT_IN23,
+    input FAB_QUANT_SHIFT_IN24,
+    input FAB_QUANT_SHIFT_IN25,
+    input FAB_QUANT_SHIFT_IN26,
+    input FAB_QUANT_SHIFT_IN27,
+    input FAB_QUANT_SHIFT_IN28,
+    input FAB_QUANT_SHIFT_IN29,
+    input FAB_QUANT_SHIFT_EN,
+    input FAB_ARRAY_EN,
+    input FAB_PSUM_SYSTOLIC_EN,
+    input FAB_PSUM_LUT_EN,
+    input FAB_SWAP_WEIGHTS,
+    input FAB_PSUM_SKEW_EN,
+    input FAB_COMPUTE_BANK_SWAP,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN0,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN1,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN2,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN3,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN4,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN5,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN6,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN7,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN8,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN9,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN10,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN11,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN12,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN13,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN14,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN15,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN16,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN17,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN18,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN19,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN20,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN21,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN22,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN23,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN24,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN25,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN26,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN27,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN28,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_IN29,
+    (* iopad_external_pin *)
+    output NPU_QUANT_SHIFT_EN,
+    (* iopad_external_pin *)
+    output NPU_ARRAY_EN,
+    (* iopad_external_pin *)
+    output NPU_PSUM_SYSTOLIC_EN,
+    (* iopad_external_pin *)
+    output NPU_PSUM_LUT_EN,
+    (* iopad_external_pin *)
+    output NPU_SWAP_WEIGHTS,
+    (* iopad_external_pin *)
+    output NPU_PSUM_SKEW_EN,
+    (* iopad_external_pin *)
+    output NPU_COMPUTE_BANK_SWAP,
+    input CLK
+);
+    parameter TIE_OFF_SKEW_EN = 0;
+endmodule
