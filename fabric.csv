@@ -16,7 +16,7 @@ AXIL_S_IO_W_3,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT
 AXIL_S_IO_W_2,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,NPU_ACT_ROW,,#,,,,,,,
 AXIL_S_IO_W_1,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,NPU_ACT_ROW,,#,,,,,,,
 AXIL_S_IO_W_0,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,LUT4AB,NPU_ACT_ROW,,#,,,,,,,
-S_term_RAM_IO,S_IO,S_IO,S_IO,S_IO,S_IO,S_IO,S_IO,S_IO,S_IO,S_IO,S_term_RAM_IO,,#,,,,,,,
+S_term_RAM_IO,SOC_DEBUG_IO,SOC_DEBUG_IO,SOC_DEBUG_IO,SOC_DEBUG_IO,S_IO,S_IO,S_IO,S_IO,S_IO,S_IO,S_term_RAM_IO,,#,,,,,,,
 FabricEnd,,,,,,,,,,,,,,,,,,
 
 ,,,,,,,,,,,,,,,,,,
@@ -31,6 +31,7 @@ SuperTileEnable,TRUE,#,TRUE,FALSE,,,,,,,,,,,,,,
 UserCLKDirection,W2E
 ,,,,,,,,,,,,,,,,,,
 Tile,./Tile/LUT4AB/LUT4AB.csv,,,,,,,,,,,,,,,,,
+Tile,./Tile/SOC_DEBUG_IO/SOC_DEBUG_IO.csv,,,,,,,,,,,,,,,,,
 Tile,./Tile/N_term_single/N_term_single.csv,,,,,,,,,,,,,,,,,
 Tile,./Tile/S_term_single/S_term_single.csv,,,,,,,,,,,,,,,,,
 Tile,./Tile/RAM_IO/RAM_IO.csv,,,,,,,,,,,,,,,,,

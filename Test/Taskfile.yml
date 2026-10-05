@@ -12,7 +12,7 @@ includes:
     taskfile: "./compile.Taskfile.yml"
 
 vars:
-  MAX_BITBYTES: '{{.MAX_BITBYTES | default "16384"}}'
+  MAX_BITBYTES: '{{.MAX_BITBYTES | default "32768"}}'
   FAB_PROJ_ROOT: '{{.FAB_PROJ_ROOT | default ".."}}'
   BUILD_DIR: '{{.BUILD_DIR | default "build"}}'
   DESIGN: '{{.DESIGN | default "sequential_16bit_en"}}'

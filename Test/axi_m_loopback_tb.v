@@ -83,7 +83,7 @@ module axi_m_loopback_tb;
         .s_data         (1'b0)
     );
 
-    localparam integer MAX_BITBYTES = 16384;
+    localparam integer MAX_BITBYTES = 32768;  // must match MAX_BITBYTES in Test/Taskfile.yml
     reg [7:0] bitstream[MAX_BITBYTES];
     reg [2047:0] bitstream_hex_arg;
     reg [2047:0] output_waveform_arg;

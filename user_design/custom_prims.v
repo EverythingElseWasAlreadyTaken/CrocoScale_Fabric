@@ -1434,3 +1434,68 @@ module AXIL_S_BEL (
     output SOC_RVALID
 );
 endmodule
+
+//Warning: The primitive SOC_DEBUG_CTRL_BEL was added by FABulous automatically.
+(* blackbox, keep *)
+module SOC_DEBUG_CTRL_BEL (
+    input FAB_DEBUG_IN0,
+    input FAB_DEBUG_IN1,
+    input FAB_DEBUG_IN2,
+    input FAB_DEBUG_IN3,
+    input FAB_DEBUG_IN4,
+    input FAB_DEBUG_IN5,
+    input FAB_DEBUG_IN6,
+    input FAB_DEBUG_IN7,
+    input FAB_USR_IRQ,
+    output FAB_DEBUG_OUT0,
+    output FAB_DEBUG_OUT1,
+    output FAB_DEBUG_OUT2,
+    output FAB_DEBUG_OUT3,
+    output FAB_DEBUG_OUT4,
+    output FAB_DEBUG_OUT5,
+    output FAB_DEBUG_OUT6,
+    output FAB_DEBUG_OUT7,
+    output FAB_SLOT_SOFT_RST_N,
+    (* iopad_external_pin *)
+    input DEBUG_OUT0,
+    (* iopad_external_pin *)
+    input DEBUG_OUT1,
+    (* iopad_external_pin *)
+    input DEBUG_OUT2,
+    (* iopad_external_pin *)
+    input DEBUG_OUT3,
+    (* iopad_external_pin *)
+    input DEBUG_OUT4,
+    (* iopad_external_pin *)
+    input DEBUG_OUT5,
+    (* iopad_external_pin *)
+    input DEBUG_OUT6,
+    (* iopad_external_pin *)
+    input DEBUG_OUT7,
+    (* iopad_external_pin *)
+    input SLOT_SOFT_RST_N,
+    (* iopad_external_pin *)
+    output DEBUG_IN0,
+    (* iopad_external_pin *)
+    output DEBUG_IN1,
+    (* iopad_external_pin *)
+    output DEBUG_IN2,
+    (* iopad_external_pin *)
+    output DEBUG_IN3,
+    (* iopad_external_pin *)
+    output DEBUG_IN4,
+    (* iopad_external_pin *)
+    output DEBUG_IN5,
+    (* iopad_external_pin *)
+    output DEBUG_IN6,
+    (* iopad_external_pin *)
+    output DEBUG_IN7,
+    (* iopad_external_pin *)
+    output USR_IRQ,
+    input CLK
+);
+    parameter INV_RESET = 0;
+    parameter INV_IRQ = 0;
+    parameter BYPASS_RST = 0;
+    parameter BYPASS_IRQ = 0;
+endmodule
