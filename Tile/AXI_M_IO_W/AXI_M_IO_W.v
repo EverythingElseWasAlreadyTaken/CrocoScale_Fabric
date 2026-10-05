@@ -7,6 +7,10 @@ module AXI_M_IO_W
         parameter [639:0] Tile_X0Y3_Emulate_Bitstream=640'b0,
         parameter [639:0] Tile_X0Y4_Emulate_Bitstream=640'b0,
         parameter [639:0] Tile_X0Y5_Emulate_Bitstream=640'b0,
+        parameter [639:0] Tile_X0Y6_Emulate_Bitstream=640'b0,
+        parameter [639:0] Tile_X0Y7_Emulate_Bitstream=640'b0,
+        parameter [639:0] Tile_X0Y8_Emulate_Bitstream=640'b0,
+        parameter [639:0] Tile_X0Y9_Emulate_Bitstream=640'b0,
 `endif
         parameter MaxFramesPerCol=20,
         parameter FrameBitsPerRow=32
@@ -87,15 +91,59 @@ module AXI_M_IO_W
         output  [7:0] Tile_X0Y5_E2BEGb, //TilePort({E} OUTPUT E2BEGb[7:0])
         output  [15:0] Tile_X0Y5_EE4BEG, //TilePort({E} OUTPUT EE4BEG[3:0])
         output  [11:0] Tile_X0Y5_E6BEG, //TilePort({E} OUTPUT E6BEG[1:0])
-    //Tile_X0Y5_Direction.NORTH
-        input  [3:0] Tile_X0Y5_N1END, //TilePort({S} INPUT N1END[3:0])
-        input  [7:0] Tile_X0Y5_N2MID, //TilePort({S} INPUT N2MID[7:0])
-        input  [7:0] Tile_X0Y5_N2END, //TilePort({S} INPUT N2END[7:0])
-        input  [15:0] Tile_X0Y5_N4END, //TilePort({S} INPUT N4END[3:0])
-        output  [3:0] Tile_X0Y5_S1BEG, //TilePort({S} OUTPUT S1BEG[3:0])
-        output  [7:0] Tile_X0Y5_S2BEG, //TilePort({S} OUTPUT S2BEG[7:0])
-        output  [7:0] Tile_X0Y5_S2BEGb, //TilePort({S} OUTPUT S2BEGb[7:0])
-        output  [15:0] Tile_X0Y5_S4BEG, //TilePort({S} OUTPUT S4BEG[3:0])
+    //Tile_X0Y6_Direction.WEST
+        input  [3:0] Tile_X0Y6_W1END, //TilePort({E} INPUT W1END[3:0])
+        input  [7:0] Tile_X0Y6_W2MID, //TilePort({E} INPUT W2MID[7:0])
+        input  [7:0] Tile_X0Y6_W2END, //TilePort({E} INPUT W2END[7:0])
+        input  [15:0] Tile_X0Y6_WW4END, //TilePort({E} INPUT WW4END[3:0])
+        input  [11:0] Tile_X0Y6_W6END, //TilePort({E} INPUT W6END[1:0])
+        output  [3:0] Tile_X0Y6_E1BEG, //TilePort({E} OUTPUT E1BEG[3:0])
+        output  [7:0] Tile_X0Y6_E2BEG, //TilePort({E} OUTPUT E2BEG[7:0])
+        output  [7:0] Tile_X0Y6_E2BEGb, //TilePort({E} OUTPUT E2BEGb[7:0])
+        output  [15:0] Tile_X0Y6_EE4BEG, //TilePort({E} OUTPUT EE4BEG[3:0])
+        output  [11:0] Tile_X0Y6_E6BEG, //TilePort({E} OUTPUT E6BEG[1:0])
+    //Tile_X0Y7_Direction.WEST
+        input  [3:0] Tile_X0Y7_W1END, //TilePort({E} INPUT W1END[3:0])
+        input  [7:0] Tile_X0Y7_W2MID, //TilePort({E} INPUT W2MID[7:0])
+        input  [7:0] Tile_X0Y7_W2END, //TilePort({E} INPUT W2END[7:0])
+        input  [15:0] Tile_X0Y7_WW4END, //TilePort({E} INPUT WW4END[3:0])
+        input  [11:0] Tile_X0Y7_W6END, //TilePort({E} INPUT W6END[1:0])
+        output  [3:0] Tile_X0Y7_E1BEG, //TilePort({E} OUTPUT E1BEG[3:0])
+        output  [7:0] Tile_X0Y7_E2BEG, //TilePort({E} OUTPUT E2BEG[7:0])
+        output  [7:0] Tile_X0Y7_E2BEGb, //TilePort({E} OUTPUT E2BEGb[7:0])
+        output  [15:0] Tile_X0Y7_EE4BEG, //TilePort({E} OUTPUT EE4BEG[3:0])
+        output  [11:0] Tile_X0Y7_E6BEG, //TilePort({E} OUTPUT E6BEG[1:0])
+    //Tile_X0Y8_Direction.WEST
+        input  [3:0] Tile_X0Y8_W1END, //TilePort({E} INPUT W1END[3:0])
+        input  [7:0] Tile_X0Y8_W2MID, //TilePort({E} INPUT W2MID[7:0])
+        input  [7:0] Tile_X0Y8_W2END, //TilePort({E} INPUT W2END[7:0])
+        input  [15:0] Tile_X0Y8_WW4END, //TilePort({E} INPUT WW4END[3:0])
+        input  [11:0] Tile_X0Y8_W6END, //TilePort({E} INPUT W6END[1:0])
+        output  [3:0] Tile_X0Y8_E1BEG, //TilePort({E} OUTPUT E1BEG[3:0])
+        output  [7:0] Tile_X0Y8_E2BEG, //TilePort({E} OUTPUT E2BEG[7:0])
+        output  [7:0] Tile_X0Y8_E2BEGb, //TilePort({E} OUTPUT E2BEGb[7:0])
+        output  [15:0] Tile_X0Y8_EE4BEG, //TilePort({E} OUTPUT EE4BEG[3:0])
+        output  [11:0] Tile_X0Y8_E6BEG, //TilePort({E} OUTPUT E6BEG[1:0])
+    //Tile_X0Y9_Direction.WEST
+        input  [3:0] Tile_X0Y9_W1END, //TilePort({E} INPUT W1END[3:0])
+        input  [7:0] Tile_X0Y9_W2MID, //TilePort({E} INPUT W2MID[7:0])
+        input  [7:0] Tile_X0Y9_W2END, //TilePort({E} INPUT W2END[7:0])
+        input  [15:0] Tile_X0Y9_WW4END, //TilePort({E} INPUT WW4END[3:0])
+        input  [11:0] Tile_X0Y9_W6END, //TilePort({E} INPUT W6END[1:0])
+        output  [3:0] Tile_X0Y9_E1BEG, //TilePort({E} OUTPUT E1BEG[3:0])
+        output  [7:0] Tile_X0Y9_E2BEG, //TilePort({E} OUTPUT E2BEG[7:0])
+        output  [7:0] Tile_X0Y9_E2BEGb, //TilePort({E} OUTPUT E2BEGb[7:0])
+        output  [15:0] Tile_X0Y9_EE4BEG, //TilePort({E} OUTPUT EE4BEG[3:0])
+        output  [11:0] Tile_X0Y9_E6BEG, //TilePort({E} OUTPUT E6BEG[1:0])
+    //Tile_X0Y9_Direction.NORTH
+        input  [3:0] Tile_X0Y9_N1END, //TilePort({S} INPUT N1END[3:0])
+        input  [7:0] Tile_X0Y9_N2MID, //TilePort({S} INPUT N2MID[7:0])
+        input  [7:0] Tile_X0Y9_N2END, //TilePort({S} INPUT N2END[7:0])
+        input  [15:0] Tile_X0Y9_N4END, //TilePort({S} INPUT N4END[3:0])
+        output  [3:0] Tile_X0Y9_S1BEG, //TilePort({S} OUTPUT S1BEG[3:0])
+        output  [7:0] Tile_X0Y9_S2BEG, //TilePort({S} OUTPUT S2BEG[7:0])
+        output  [7:0] Tile_X0Y9_S2BEGb, //TilePort({S} OUTPUT S2BEGb[7:0])
+        output  [15:0] Tile_X0Y9_S4BEG, //TilePort({S} OUTPUT S4BEG[3:0])
     //Tile IO ports from BELs
     //SuperTile BEL IO ports
         input  AXI_M_SOC_AWREADY,
@@ -185,6 +233,11 @@ module AXI_M_IO_W
         output  AXI_M_SOC_AWSIZE2,
         output  AXI_M_SOC_AWBURST0,
         output  AXI_M_SOC_AWBURST1,
+        output  AXI_M_SOC_AWLOCK,
+        output  AXI_M_SOC_AWCACHE0,
+        output  AXI_M_SOC_AWCACHE1,
+        output  AXI_M_SOC_AWCACHE2,
+        output  AXI_M_SOC_AWCACHE3,
         output  AXI_M_SOC_AWVALID,
         output  AXI_M_SOC_WDATA0,
         output  AXI_M_SOC_WDATA1,
@@ -270,6 +323,11 @@ module AXI_M_IO_W
         output  AXI_M_SOC_ARSIZE2,
         output  AXI_M_SOC_ARBURST0,
         output  AXI_M_SOC_ARBURST1,
+        output  AXI_M_SOC_ARLOCK,
+        output  AXI_M_SOC_ARCACHE0,
+        output  AXI_M_SOC_ARCACHE1,
+        output  AXI_M_SOC_ARCACHE2,
+        output  AXI_M_SOC_ARCACHE3,
         output  AXI_M_SOC_ARVALID,
         output  AXI_M_SOC_RREADY,
         output  [MaxFramesPerCol-1:0] Tile_X0Y0_FrameStrobe_O, //CONFIG_PORT
@@ -284,8 +342,16 @@ module AXI_M_IO_W
         input  [FrameBitsPerRow-1:0] Tile_X0Y4_FrameData, //CONFIG_PORT
         output  [FrameBitsPerRow-1:0] Tile_X0Y4_FrameData_O, //CONFIG_PORT
         input  [FrameBitsPerRow-1:0] Tile_X0Y5_FrameData, //CONFIG_PORT
-        input  [MaxFramesPerCol-1:0] Tile_X0Y5_FrameStrobe, //CONFIG_PORT
         output  [FrameBitsPerRow-1:0] Tile_X0Y5_FrameData_O, //CONFIG_PORT
+        input  [FrameBitsPerRow-1:0] Tile_X0Y6_FrameData, //CONFIG_PORT
+        output  [FrameBitsPerRow-1:0] Tile_X0Y6_FrameData_O, //CONFIG_PORT
+        input  [FrameBitsPerRow-1:0] Tile_X0Y7_FrameData, //CONFIG_PORT
+        output  [FrameBitsPerRow-1:0] Tile_X0Y7_FrameData_O, //CONFIG_PORT
+        input  [FrameBitsPerRow-1:0] Tile_X0Y8_FrameData, //CONFIG_PORT
+        output  [FrameBitsPerRow-1:0] Tile_X0Y8_FrameData_O, //CONFIG_PORT
+        input  [FrameBitsPerRow-1:0] Tile_X0Y9_FrameData, //CONFIG_PORT
+        input  [MaxFramesPerCol-1:0] Tile_X0Y9_FrameStrobe, //CONFIG_PORT
+        output  [FrameBitsPerRow-1:0] Tile_X0Y9_FrameData_O, //CONFIG_PORT
         output  Tile_X0Y0_UserCLKo,
         input  Tile_X0Y0_UserCLK,
         output  Tile_X0Y1_UserCLKo,
@@ -297,20 +363,35 @@ module AXI_M_IO_W
         output  Tile_X0Y4_UserCLKo,
         input  Tile_X0Y4_UserCLK,
         output  Tile_X0Y5_UserCLKo,
-        input  Tile_X0Y5_UserCLK
+        input  Tile_X0Y5_UserCLK,
+        output  Tile_X0Y6_UserCLKo,
+        input  Tile_X0Y6_UserCLK,
+        output  Tile_X0Y7_UserCLKo,
+        input  Tile_X0Y7_UserCLK,
+        output  Tile_X0Y8_UserCLKo,
+        input  Tile_X0Y8_UserCLK,
+        output  Tile_X0Y9_UserCLKo,
+        input  Tile_X0Y9_UserCLK
 );
 
  //signal declarations
  //SJUMP signals (child tile -> supertile SM)
-    wire[24-1:0] AXI_M_IO_W_5_BASE_TO_TOP;
-    wire[24-1:0] AXI_M_IO_W_4_BASE_TO_TOP;
-    wire[24-1:0] AXI_M_IO_W_3_BASE_TO_TOP;
-    wire[24-1:0] AXI_M_IO_W_2_BASE_TO_TOP;
-    wire[24-1:0] AXI_M_IO_W_1_BASE_TO_TOP;
-    wire[24-1:0] AXI_M_IO_W_0_BASE_TO_TOP;
+    wire[7-1:0] AXI_M_IO_W_9_BASE_TO_TOP;
+    wire[12-1:0] AXI_M_IO_W_8_BASE_TO_TOP;
+    wire[12-1:0] AXI_M_IO_W_7_BASE_TO_TOP;
+    wire[14-1:0] AXI_M_IO_W_6_BASE_TO_TOP;
+    wire[16-1:0] AXI_M_IO_W_5_BASE_TO_TOP;
+    wire[17-1:0] AXI_M_IO_W_4_BASE_TO_TOP;
+    wire[16-1:0] AXI_M_IO_W_3_BASE_TO_TOP;
+    wire[16-1:0] AXI_M_IO_W_2_BASE_TO_TOP;
+    wire[16-1:0] AXI_M_IO_W_1_BASE_TO_TOP;
+    wire[16-1:0] AXI_M_IO_W_0_BASE_TO_TOP;
  //SJUMP signals (supertile SM -> child tile)
-    wire[8-1:0] AXI_M_IO_W_5_TOP_TO_BASE;
-    wire[8-1:0] AXI_M_IO_W_4_TOP_TO_BASE;
+    wire[1-1:0] AXI_M_IO_W_8_TOP_TO_BASE;
+    wire[1-1:0] AXI_M_IO_W_7_TOP_TO_BASE;
+    wire[2-1:0] AXI_M_IO_W_6_TOP_TO_BASE;
+    wire[2-1:0] AXI_M_IO_W_5_TOP_TO_BASE;
+    wire[4-1:0] AXI_M_IO_W_4_TOP_TO_BASE;
     wire[8-1:0] AXI_M_IO_W_3_TOP_TO_BASE;
     wire[8-1:0] AXI_M_IO_W_2_TOP_TO_BASE;
     wire[8-1:0] AXI_M_IO_W_1_TOP_TO_BASE;
@@ -361,6 +442,11 @@ module AXI_M_IO_W
     wire AXI_M_FAB_AWSIZE2;
     wire AXI_M_FAB_AWBURST0;
     wire AXI_M_FAB_AWBURST1;
+    wire AXI_M_FAB_AWLOCK;
+    wire AXI_M_FAB_AWCACHE0;
+    wire AXI_M_FAB_AWCACHE1;
+    wire AXI_M_FAB_AWCACHE2;
+    wire AXI_M_FAB_AWCACHE3;
     wire AXI_M_FAB_AWVALID;
     wire AXI_M_FAB_WDATA0;
     wire AXI_M_FAB_WDATA1;
@@ -446,6 +532,11 @@ module AXI_M_IO_W
     wire AXI_M_FAB_ARSIZE2;
     wire AXI_M_FAB_ARBURST0;
     wire AXI_M_FAB_ARBURST1;
+    wire AXI_M_FAB_ARLOCK;
+    wire AXI_M_FAB_ARCACHE0;
+    wire AXI_M_FAB_ARCACHE1;
+    wire AXI_M_FAB_ARCACHE2;
+    wire AXI_M_FAB_ARCACHE3;
     wire AXI_M_FAB_ARVALID;
     wire AXI_M_FAB_RREADY;
     wire AXI_M_FAB_AWREADY;
@@ -540,21 +631,65 @@ module AXI_M_IO_W
     wire[7:0] Tile_X0Y5_N2BEG; //TilePort({N} OUTPUT N2BEG[7:0])
     wire[7:0] Tile_X0Y5_N2BEGb; //TilePort({N} OUTPUT N2BEGb[7:0])
     wire[15:0] Tile_X0Y5_N4BEG; //TilePort({N} OUTPUT N4BEG[3:0])
+ //Tile_X0Y5_Direction.NORTH
+    wire[3:0] Tile_X0Y5_S1BEG; //TilePort({S} OUTPUT S1BEG[3:0])
+    wire[7:0] Tile_X0Y5_S2BEG; //TilePort({S} OUTPUT S2BEG[7:0])
+    wire[7:0] Tile_X0Y5_S2BEGb; //TilePort({S} OUTPUT S2BEGb[7:0])
+    wire[15:0] Tile_X0Y5_S4BEG; //TilePort({S} OUTPUT S4BEG[3:0])
+ //Tile_X0Y6_Direction.NORTH
+    wire[3:0] Tile_X0Y6_N1BEG; //TilePort({N} OUTPUT N1BEG[3:0])
+    wire[7:0] Tile_X0Y6_N2BEG; //TilePort({N} OUTPUT N2BEG[7:0])
+    wire[7:0] Tile_X0Y6_N2BEGb; //TilePort({N} OUTPUT N2BEGb[7:0])
+    wire[15:0] Tile_X0Y6_N4BEG; //TilePort({N} OUTPUT N4BEG[3:0])
+ //Tile_X0Y6_Direction.NORTH
+    wire[3:0] Tile_X0Y6_S1BEG; //TilePort({S} OUTPUT S1BEG[3:0])
+    wire[7:0] Tile_X0Y6_S2BEG; //TilePort({S} OUTPUT S2BEG[7:0])
+    wire[7:0] Tile_X0Y6_S2BEGb; //TilePort({S} OUTPUT S2BEGb[7:0])
+    wire[15:0] Tile_X0Y6_S4BEG; //TilePort({S} OUTPUT S4BEG[3:0])
+ //Tile_X0Y7_Direction.NORTH
+    wire[3:0] Tile_X0Y7_N1BEG; //TilePort({N} OUTPUT N1BEG[3:0])
+    wire[7:0] Tile_X0Y7_N2BEG; //TilePort({N} OUTPUT N2BEG[7:0])
+    wire[7:0] Tile_X0Y7_N2BEGb; //TilePort({N} OUTPUT N2BEGb[7:0])
+    wire[15:0] Tile_X0Y7_N4BEG; //TilePort({N} OUTPUT N4BEG[3:0])
+ //Tile_X0Y7_Direction.NORTH
+    wire[3:0] Tile_X0Y7_S1BEG; //TilePort({S} OUTPUT S1BEG[3:0])
+    wire[7:0] Tile_X0Y7_S2BEG; //TilePort({S} OUTPUT S2BEG[7:0])
+    wire[7:0] Tile_X0Y7_S2BEGb; //TilePort({S} OUTPUT S2BEGb[7:0])
+    wire[15:0] Tile_X0Y7_S4BEG; //TilePort({S} OUTPUT S4BEG[3:0])
+ //Tile_X0Y8_Direction.NORTH
+    wire[3:0] Tile_X0Y8_N1BEG; //TilePort({N} OUTPUT N1BEG[3:0])
+    wire[7:0] Tile_X0Y8_N2BEG; //TilePort({N} OUTPUT N2BEG[7:0])
+    wire[7:0] Tile_X0Y8_N2BEGb; //TilePort({N} OUTPUT N2BEGb[7:0])
+    wire[15:0] Tile_X0Y8_N4BEG; //TilePort({N} OUTPUT N4BEG[3:0])
+ //Tile_X0Y8_Direction.NORTH
+    wire[3:0] Tile_X0Y8_S1BEG; //TilePort({S} OUTPUT S1BEG[3:0])
+    wire[7:0] Tile_X0Y8_S2BEG; //TilePort({S} OUTPUT S2BEG[7:0])
+    wire[7:0] Tile_X0Y8_S2BEGb; //TilePort({S} OUTPUT S2BEGb[7:0])
+    wire[15:0] Tile_X0Y8_S4BEG; //TilePort({S} OUTPUT S4BEG[3:0])
+ //Tile_X0Y9_Direction.NORTH
+    wire[3:0] Tile_X0Y9_N1BEG; //TilePort({N} OUTPUT N1BEG[3:0])
+    wire[7:0] Tile_X0Y9_N2BEG; //TilePort({N} OUTPUT N2BEG[7:0])
+    wire[7:0] Tile_X0Y9_N2BEGb; //TilePort({N} OUTPUT N2BEGb[7:0])
+    wire[15:0] Tile_X0Y9_N4BEG; //TilePort({N} OUTPUT N4BEG[3:0])
     wire[MaxFramesPerCol-1:0] Tile_X0Y1_FrameStrobe_O;
     wire[MaxFramesPerCol-1:0] Tile_X0Y2_FrameStrobe_O;
     wire[MaxFramesPerCol-1:0] Tile_X0Y3_FrameStrobe_O;
     wire[MaxFramesPerCol-1:0] Tile_X0Y4_FrameStrobe_O;
     wire[MaxFramesPerCol-1:0] Tile_X0Y5_FrameStrobe_O;
-    wire[20-1:0] ST_ConfigBits;
-    wire[20-1:0] ST_ConfigBits_N;
+    wire[MaxFramesPerCol-1:0] Tile_X0Y6_FrameStrobe_O;
+    wire[MaxFramesPerCol-1:0] Tile_X0Y7_FrameStrobe_O;
+    wire[MaxFramesPerCol-1:0] Tile_X0Y8_FrameStrobe_O;
+    wire[MaxFramesPerCol-1:0] Tile_X0Y9_FrameStrobe_O;
+    wire[12-1:0] ST_ConfigBits;
+    wire[12-1:0] ST_ConfigBits_N;
 
-AXI_M_IO_W_5
+AXI_M_IO_W_9
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(Tile_X0Y0_Emulate_Bitstream)
     )
 `endif
-    Tile_X0Y0_AXI_M_IO_W_5
+    Tile_X0Y0_AXI_M_IO_W_9
     (
     .N1END(Tile_X0Y1_N1BEG),
     .N2MID(Tile_X0Y1_N2BEG),
@@ -582,8 +717,7 @@ AXI_M_IO_W_5
     .S2BEG(Tile_X0Y0_S2BEG),
     .S2BEGb(Tile_X0Y0_S2BEGb),
     .S4BEG(Tile_X0Y0_S4BEG),
-    .BASE_TO_TOP(AXI_M_IO_W_5_BASE_TO_TOP),
-    .TOP_TO_BASE(AXI_M_IO_W_5_TOP_TO_BASE),
+    .BASE_TO_TOP(AXI_M_IO_W_9_BASE_TO_TOP),
     .UserCLK(Tile_X0Y0_UserCLK),
     .UserCLKo(Tile_X0Y0_UserCLKo),
     .FrameData(Tile_X0Y0_FrameData),
@@ -592,13 +726,13 @@ AXI_M_IO_W_5
     .FrameStrobe_O(Tile_X0Y0_FrameStrobe_O)
 );
 
-AXI_M_IO_W_4
+AXI_M_IO_W_8
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(Tile_X0Y1_Emulate_Bitstream)
     )
 `endif
-    Tile_X0Y1_AXI_M_IO_W_4
+    Tile_X0Y1_AXI_M_IO_W_8
     (
     .N1END(Tile_X0Y2_N1BEG),
     .N2MID(Tile_X0Y2_N2BEG),
@@ -626,8 +760,8 @@ AXI_M_IO_W_4
     .S2BEG(Tile_X0Y1_S2BEG),
     .S2BEGb(Tile_X0Y1_S2BEGb),
     .S4BEG(Tile_X0Y1_S4BEG),
-    .BASE_TO_TOP(AXI_M_IO_W_4_BASE_TO_TOP),
-    .TOP_TO_BASE(AXI_M_IO_W_4_TOP_TO_BASE),
+    .BASE_TO_TOP(AXI_M_IO_W_8_BASE_TO_TOP),
+    .TOP_TO_BASE(AXI_M_IO_W_8_TOP_TO_BASE),
     .UserCLK(Tile_X0Y1_UserCLK),
     .UserCLKo(Tile_X0Y1_UserCLKo),
     .FrameData(Tile_X0Y1_FrameData),
@@ -636,13 +770,13 @@ AXI_M_IO_W_4
     .FrameStrobe_O(Tile_X0Y1_FrameStrobe_O)
 );
 
-AXI_M_IO_W_3
+AXI_M_IO_W_7
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(Tile_X0Y2_Emulate_Bitstream)
     )
 `endif
-    Tile_X0Y2_AXI_M_IO_W_3
+    Tile_X0Y2_AXI_M_IO_W_7
     (
     .N1END(Tile_X0Y3_N1BEG),
     .N2MID(Tile_X0Y3_N2BEG),
@@ -670,8 +804,8 @@ AXI_M_IO_W_3
     .S2BEG(Tile_X0Y2_S2BEG),
     .S2BEGb(Tile_X0Y2_S2BEGb),
     .S4BEG(Tile_X0Y2_S4BEG),
-    .BASE_TO_TOP(AXI_M_IO_W_3_BASE_TO_TOP),
-    .TOP_TO_BASE(AXI_M_IO_W_3_TOP_TO_BASE),
+    .BASE_TO_TOP(AXI_M_IO_W_7_BASE_TO_TOP),
+    .TOP_TO_BASE(AXI_M_IO_W_7_TOP_TO_BASE),
     .UserCLK(Tile_X0Y2_UserCLK),
     .UserCLKo(Tile_X0Y2_UserCLKo),
     .FrameData(Tile_X0Y2_FrameData),
@@ -680,13 +814,13 @@ AXI_M_IO_W_3
     .FrameStrobe_O(Tile_X0Y2_FrameStrobe_O)
 );
 
-AXI_M_IO_W_2
+AXI_M_IO_W_6
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(Tile_X0Y3_Emulate_Bitstream)
     )
 `endif
-    Tile_X0Y3_AXI_M_IO_W_2
+    Tile_X0Y3_AXI_M_IO_W_6
     (
     .N1END(Tile_X0Y4_N1BEG),
     .N2MID(Tile_X0Y4_N2BEG),
@@ -714,8 +848,8 @@ AXI_M_IO_W_2
     .S2BEG(Tile_X0Y3_S2BEG),
     .S2BEGb(Tile_X0Y3_S2BEGb),
     .S4BEG(Tile_X0Y3_S4BEG),
-    .BASE_TO_TOP(AXI_M_IO_W_2_BASE_TO_TOP),
-    .TOP_TO_BASE(AXI_M_IO_W_2_TOP_TO_BASE),
+    .BASE_TO_TOP(AXI_M_IO_W_6_BASE_TO_TOP),
+    .TOP_TO_BASE(AXI_M_IO_W_6_TOP_TO_BASE),
     .UserCLK(Tile_X0Y3_UserCLK),
     .UserCLKo(Tile_X0Y3_UserCLKo),
     .FrameData(Tile_X0Y3_FrameData),
@@ -724,13 +858,13 @@ AXI_M_IO_W_2
     .FrameStrobe_O(Tile_X0Y3_FrameStrobe_O)
 );
 
-AXI_M_IO_W_1
+AXI_M_IO_W_5
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(Tile_X0Y4_Emulate_Bitstream)
     )
 `endif
-    Tile_X0Y4_AXI_M_IO_W_1
+    Tile_X0Y4_AXI_M_IO_W_5
     (
     .N1END(Tile_X0Y5_N1BEG),
     .N2MID(Tile_X0Y5_N2BEG),
@@ -758,8 +892,8 @@ AXI_M_IO_W_1
     .S2BEG(Tile_X0Y4_S2BEG),
     .S2BEGb(Tile_X0Y4_S2BEGb),
     .S4BEG(Tile_X0Y4_S4BEG),
-    .BASE_TO_TOP(AXI_M_IO_W_1_BASE_TO_TOP),
-    .TOP_TO_BASE(AXI_M_IO_W_1_TOP_TO_BASE),
+    .BASE_TO_TOP(AXI_M_IO_W_5_BASE_TO_TOP),
+    .TOP_TO_BASE(AXI_M_IO_W_5_TOP_TO_BASE),
     .UserCLK(Tile_X0Y4_UserCLK),
     .UserCLKo(Tile_X0Y4_UserCLKo),
     .FrameData(Tile_X0Y4_FrameData),
@@ -768,18 +902,18 @@ AXI_M_IO_W_1
     .FrameStrobe_O(Tile_X0Y4_FrameStrobe_O)
 );
 
-AXI_M_IO_W_0
+AXI_M_IO_W_4
 `ifdef EMULATION
     #(
     .Emulate_Bitstream(Tile_X0Y5_Emulate_Bitstream)
     )
 `endif
-    Tile_X0Y5_AXI_M_IO_W_0
+    Tile_X0Y5_AXI_M_IO_W_4
     (
-    .N1END(Tile_X0Y5_N1END),
-    .N2MID(Tile_X0Y5_N2MID),
-    .N2END(Tile_X0Y5_N2END),
-    .N4END(Tile_X0Y5_N4END),
+    .N1END(Tile_X0Y6_N1BEG),
+    .N2MID(Tile_X0Y6_N2BEG),
+    .N2END(Tile_X0Y6_N2BEGb),
+    .N4END(Tile_X0Y6_N4BEG),
     .S1END(Tile_X0Y4_S1BEG),
     .S2MID(Tile_X0Y4_S2BEG),
     .S2END(Tile_X0Y4_S2BEGb),
@@ -802,31 +936,252 @@ AXI_M_IO_W_0
     .S2BEG(Tile_X0Y5_S2BEG),
     .S2BEGb(Tile_X0Y5_S2BEGb),
     .S4BEG(Tile_X0Y5_S4BEG),
-    .BASE_TO_TOP(AXI_M_IO_W_0_BASE_TO_TOP),
-    .TOP_TO_BASE(AXI_M_IO_W_0_TOP_TO_BASE),
+    .BASE_TO_TOP(AXI_M_IO_W_4_BASE_TO_TOP),
+    .TOP_TO_BASE(AXI_M_IO_W_4_TOP_TO_BASE),
     .UserCLK(Tile_X0Y5_UserCLK),
     .UserCLKo(Tile_X0Y5_UserCLKo),
     .FrameData(Tile_X0Y5_FrameData),
     .FrameData_O(Tile_X0Y5_FrameData_O),
-    .FrameStrobe(Tile_X0Y5_FrameStrobe),
+    .FrameStrobe(Tile_X0Y6_FrameStrobe_O),
     .FrameStrobe_O(Tile_X0Y5_FrameStrobe_O)
+);
+
+AXI_M_IO_W_3
+`ifdef EMULATION
+    #(
+    .Emulate_Bitstream(Tile_X0Y6_Emulate_Bitstream)
+    )
+`endif
+    Tile_X0Y6_AXI_M_IO_W_3
+    (
+    .N1END(Tile_X0Y7_N1BEG),
+    .N2MID(Tile_X0Y7_N2BEG),
+    .N2END(Tile_X0Y7_N2BEGb),
+    .N4END(Tile_X0Y7_N4BEG),
+    .S1END(Tile_X0Y5_S1BEG),
+    .S2MID(Tile_X0Y5_S2BEG),
+    .S2END(Tile_X0Y5_S2BEGb),
+    .S4END(Tile_X0Y5_S4BEG),
+    .W1END(Tile_X0Y6_W1END),
+    .W2MID(Tile_X0Y6_W2MID),
+    .W2END(Tile_X0Y6_W2END),
+    .WW4END(Tile_X0Y6_WW4END),
+    .W6END(Tile_X0Y6_W6END),
+    .N1BEG(Tile_X0Y6_N1BEG),
+    .N2BEG(Tile_X0Y6_N2BEG),
+    .N2BEGb(Tile_X0Y6_N2BEGb),
+    .N4BEG(Tile_X0Y6_N4BEG),
+    .E1BEG(Tile_X0Y6_E1BEG),
+    .E2BEG(Tile_X0Y6_E2BEG),
+    .E2BEGb(Tile_X0Y6_E2BEGb),
+    .EE4BEG(Tile_X0Y6_EE4BEG),
+    .E6BEG(Tile_X0Y6_E6BEG),
+    .S1BEG(Tile_X0Y6_S1BEG),
+    .S2BEG(Tile_X0Y6_S2BEG),
+    .S2BEGb(Tile_X0Y6_S2BEGb),
+    .S4BEG(Tile_X0Y6_S4BEG),
+    .BASE_TO_TOP(AXI_M_IO_W_3_BASE_TO_TOP),
+    .TOP_TO_BASE(AXI_M_IO_W_3_TOP_TO_BASE),
+    .UserCLK(Tile_X0Y6_UserCLK),
+    .UserCLKo(Tile_X0Y6_UserCLKo),
+    .FrameData(Tile_X0Y6_FrameData),
+    .FrameData_O(Tile_X0Y6_FrameData_O),
+    .FrameStrobe(Tile_X0Y7_FrameStrobe_O),
+    .FrameStrobe_O(Tile_X0Y6_FrameStrobe_O)
+);
+
+AXI_M_IO_W_2
+`ifdef EMULATION
+    #(
+    .Emulate_Bitstream(Tile_X0Y7_Emulate_Bitstream)
+    )
+`endif
+    Tile_X0Y7_AXI_M_IO_W_2
+    (
+    .N1END(Tile_X0Y8_N1BEG),
+    .N2MID(Tile_X0Y8_N2BEG),
+    .N2END(Tile_X0Y8_N2BEGb),
+    .N4END(Tile_X0Y8_N4BEG),
+    .S1END(Tile_X0Y6_S1BEG),
+    .S2MID(Tile_X0Y6_S2BEG),
+    .S2END(Tile_X0Y6_S2BEGb),
+    .S4END(Tile_X0Y6_S4BEG),
+    .W1END(Tile_X0Y7_W1END),
+    .W2MID(Tile_X0Y7_W2MID),
+    .W2END(Tile_X0Y7_W2END),
+    .WW4END(Tile_X0Y7_WW4END),
+    .W6END(Tile_X0Y7_W6END),
+    .N1BEG(Tile_X0Y7_N1BEG),
+    .N2BEG(Tile_X0Y7_N2BEG),
+    .N2BEGb(Tile_X0Y7_N2BEGb),
+    .N4BEG(Tile_X0Y7_N4BEG),
+    .E1BEG(Tile_X0Y7_E1BEG),
+    .E2BEG(Tile_X0Y7_E2BEG),
+    .E2BEGb(Tile_X0Y7_E2BEGb),
+    .EE4BEG(Tile_X0Y7_EE4BEG),
+    .E6BEG(Tile_X0Y7_E6BEG),
+    .S1BEG(Tile_X0Y7_S1BEG),
+    .S2BEG(Tile_X0Y7_S2BEG),
+    .S2BEGb(Tile_X0Y7_S2BEGb),
+    .S4BEG(Tile_X0Y7_S4BEG),
+    .BASE_TO_TOP(AXI_M_IO_W_2_BASE_TO_TOP),
+    .TOP_TO_BASE(AXI_M_IO_W_2_TOP_TO_BASE),
+    .UserCLK(Tile_X0Y7_UserCLK),
+    .UserCLKo(Tile_X0Y7_UserCLKo),
+    .FrameData(Tile_X0Y7_FrameData),
+    .FrameData_O(Tile_X0Y7_FrameData_O),
+    .FrameStrobe(Tile_X0Y8_FrameStrobe_O),
+    .FrameStrobe_O(Tile_X0Y7_FrameStrobe_O)
+);
+
+AXI_M_IO_W_1
+`ifdef EMULATION
+    #(
+    .Emulate_Bitstream(Tile_X0Y8_Emulate_Bitstream)
+    )
+`endif
+    Tile_X0Y8_AXI_M_IO_W_1
+    (
+    .N1END(Tile_X0Y9_N1BEG),
+    .N2MID(Tile_X0Y9_N2BEG),
+    .N2END(Tile_X0Y9_N2BEGb),
+    .N4END(Tile_X0Y9_N4BEG),
+    .S1END(Tile_X0Y7_S1BEG),
+    .S2MID(Tile_X0Y7_S2BEG),
+    .S2END(Tile_X0Y7_S2BEGb),
+    .S4END(Tile_X0Y7_S4BEG),
+    .W1END(Tile_X0Y8_W1END),
+    .W2MID(Tile_X0Y8_W2MID),
+    .W2END(Tile_X0Y8_W2END),
+    .WW4END(Tile_X0Y8_WW4END),
+    .W6END(Tile_X0Y8_W6END),
+    .N1BEG(Tile_X0Y8_N1BEG),
+    .N2BEG(Tile_X0Y8_N2BEG),
+    .N2BEGb(Tile_X0Y8_N2BEGb),
+    .N4BEG(Tile_X0Y8_N4BEG),
+    .E1BEG(Tile_X0Y8_E1BEG),
+    .E2BEG(Tile_X0Y8_E2BEG),
+    .E2BEGb(Tile_X0Y8_E2BEGb),
+    .EE4BEG(Tile_X0Y8_EE4BEG),
+    .E6BEG(Tile_X0Y8_E6BEG),
+    .S1BEG(Tile_X0Y8_S1BEG),
+    .S2BEG(Tile_X0Y8_S2BEG),
+    .S2BEGb(Tile_X0Y8_S2BEGb),
+    .S4BEG(Tile_X0Y8_S4BEG),
+    .BASE_TO_TOP(AXI_M_IO_W_1_BASE_TO_TOP),
+    .TOP_TO_BASE(AXI_M_IO_W_1_TOP_TO_BASE),
+    .UserCLK(Tile_X0Y8_UserCLK),
+    .UserCLKo(Tile_X0Y8_UserCLKo),
+    .FrameData(Tile_X0Y8_FrameData),
+    .FrameData_O(Tile_X0Y8_FrameData_O),
+    .FrameStrobe(Tile_X0Y9_FrameStrobe_O),
+    .FrameStrobe_O(Tile_X0Y8_FrameStrobe_O)
+);
+
+AXI_M_IO_W_0
+`ifdef EMULATION
+    #(
+    .Emulate_Bitstream(Tile_X0Y9_Emulate_Bitstream)
+    )
+`endif
+    Tile_X0Y9_AXI_M_IO_W_0
+    (
+    .N1END(Tile_X0Y9_N1END),
+    .N2MID(Tile_X0Y9_N2MID),
+    .N2END(Tile_X0Y9_N2END),
+    .N4END(Tile_X0Y9_N4END),
+    .S1END(Tile_X0Y8_S1BEG),
+    .S2MID(Tile_X0Y8_S2BEG),
+    .S2END(Tile_X0Y8_S2BEGb),
+    .S4END(Tile_X0Y8_S4BEG),
+    .W1END(Tile_X0Y9_W1END),
+    .W2MID(Tile_X0Y9_W2MID),
+    .W2END(Tile_X0Y9_W2END),
+    .WW4END(Tile_X0Y9_WW4END),
+    .W6END(Tile_X0Y9_W6END),
+    .N1BEG(Tile_X0Y9_N1BEG),
+    .N2BEG(Tile_X0Y9_N2BEG),
+    .N2BEGb(Tile_X0Y9_N2BEGb),
+    .N4BEG(Tile_X0Y9_N4BEG),
+    .E1BEG(Tile_X0Y9_E1BEG),
+    .E2BEG(Tile_X0Y9_E2BEG),
+    .E2BEGb(Tile_X0Y9_E2BEGb),
+    .EE4BEG(Tile_X0Y9_EE4BEG),
+    .E6BEG(Tile_X0Y9_E6BEG),
+    .S1BEG(Tile_X0Y9_S1BEG),
+    .S2BEG(Tile_X0Y9_S2BEG),
+    .S2BEGb(Tile_X0Y9_S2BEGb),
+    .S4BEG(Tile_X0Y9_S4BEG),
+    .BASE_TO_TOP(AXI_M_IO_W_0_BASE_TO_TOP),
+    .TOP_TO_BASE(AXI_M_IO_W_0_TOP_TO_BASE),
+    .UserCLK(Tile_X0Y9_UserCLK),
+    .UserCLKo(Tile_X0Y9_UserCLKo),
+    .FrameData(Tile_X0Y9_FrameData),
+    .FrameData_O(Tile_X0Y9_FrameData_O),
+    .FrameStrobe(Tile_X0Y9_FrameStrobe),
+    .FrameStrobe_O(Tile_X0Y9_FrameStrobe_O)
 );
 
 AXI_M_IO_W_ConfigMem
 `ifdef EMULATION
     #(
-    .Emulate_Bitstream(Tile_X0Y5_Emulate_Bitstream)
+    .Emulate_Bitstream(Tile_X0Y9_Emulate_Bitstream)
     )
 `endif
     Inst_AXI_M_IO_W_ConfigMem
     (
-    .FrameData(Tile_X0Y5_FrameData),
-    .FrameStrobe(Tile_X0Y5_FrameStrobe),
-    .ConfigBits(ST_ConfigBits[20-1:0]),
-    .ConfigBits_N(ST_ConfigBits_N[20-1:0])
+    .FrameData(Tile_X0Y9_FrameData),
+    .FrameStrobe(Tile_X0Y9_FrameStrobe),
+    .ConfigBits(ST_ConfigBits[12-1:0]),
+    .ConfigBits_N(ST_ConfigBits_N[12-1:0])
 );
 
 AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
+    .AXI_M_IO_W_9_BASE_TO_TOP0(AXI_M_IO_W_9_BASE_TO_TOP[0]),
+    .AXI_M_IO_W_9_BASE_TO_TOP1(AXI_M_IO_W_9_BASE_TO_TOP[1]),
+    .AXI_M_IO_W_9_BASE_TO_TOP2(AXI_M_IO_W_9_BASE_TO_TOP[2]),
+    .AXI_M_IO_W_9_BASE_TO_TOP3(AXI_M_IO_W_9_BASE_TO_TOP[3]),
+    .AXI_M_IO_W_9_BASE_TO_TOP4(AXI_M_IO_W_9_BASE_TO_TOP[4]),
+    .AXI_M_IO_W_9_BASE_TO_TOP5(AXI_M_IO_W_9_BASE_TO_TOP[5]),
+    .AXI_M_IO_W_9_BASE_TO_TOP6(AXI_M_IO_W_9_BASE_TO_TOP[6]),
+    .AXI_M_IO_W_8_BASE_TO_TOP0(AXI_M_IO_W_8_BASE_TO_TOP[0]),
+    .AXI_M_IO_W_8_BASE_TO_TOP1(AXI_M_IO_W_8_BASE_TO_TOP[1]),
+    .AXI_M_IO_W_8_BASE_TO_TOP2(AXI_M_IO_W_8_BASE_TO_TOP[2]),
+    .AXI_M_IO_W_8_BASE_TO_TOP3(AXI_M_IO_W_8_BASE_TO_TOP[3]),
+    .AXI_M_IO_W_8_BASE_TO_TOP4(AXI_M_IO_W_8_BASE_TO_TOP[4]),
+    .AXI_M_IO_W_8_BASE_TO_TOP5(AXI_M_IO_W_8_BASE_TO_TOP[5]),
+    .AXI_M_IO_W_8_BASE_TO_TOP6(AXI_M_IO_W_8_BASE_TO_TOP[6]),
+    .AXI_M_IO_W_8_BASE_TO_TOP7(AXI_M_IO_W_8_BASE_TO_TOP[7]),
+    .AXI_M_IO_W_8_BASE_TO_TOP8(AXI_M_IO_W_8_BASE_TO_TOP[8]),
+    .AXI_M_IO_W_8_BASE_TO_TOP9(AXI_M_IO_W_8_BASE_TO_TOP[9]),
+    .AXI_M_IO_W_8_BASE_TO_TOP10(AXI_M_IO_W_8_BASE_TO_TOP[10]),
+    .AXI_M_IO_W_8_BASE_TO_TOP11(AXI_M_IO_W_8_BASE_TO_TOP[11]),
+    .AXI_M_IO_W_7_BASE_TO_TOP0(AXI_M_IO_W_7_BASE_TO_TOP[0]),
+    .AXI_M_IO_W_7_BASE_TO_TOP1(AXI_M_IO_W_7_BASE_TO_TOP[1]),
+    .AXI_M_IO_W_7_BASE_TO_TOP2(AXI_M_IO_W_7_BASE_TO_TOP[2]),
+    .AXI_M_IO_W_7_BASE_TO_TOP3(AXI_M_IO_W_7_BASE_TO_TOP[3]),
+    .AXI_M_IO_W_7_BASE_TO_TOP4(AXI_M_IO_W_7_BASE_TO_TOP[4]),
+    .AXI_M_IO_W_7_BASE_TO_TOP5(AXI_M_IO_W_7_BASE_TO_TOP[5]),
+    .AXI_M_IO_W_7_BASE_TO_TOP6(AXI_M_IO_W_7_BASE_TO_TOP[6]),
+    .AXI_M_IO_W_7_BASE_TO_TOP7(AXI_M_IO_W_7_BASE_TO_TOP[7]),
+    .AXI_M_IO_W_7_BASE_TO_TOP8(AXI_M_IO_W_7_BASE_TO_TOP[8]),
+    .AXI_M_IO_W_7_BASE_TO_TOP9(AXI_M_IO_W_7_BASE_TO_TOP[9]),
+    .AXI_M_IO_W_7_BASE_TO_TOP10(AXI_M_IO_W_7_BASE_TO_TOP[10]),
+    .AXI_M_IO_W_7_BASE_TO_TOP11(AXI_M_IO_W_7_BASE_TO_TOP[11]),
+    .AXI_M_IO_W_6_BASE_TO_TOP0(AXI_M_IO_W_6_BASE_TO_TOP[0]),
+    .AXI_M_IO_W_6_BASE_TO_TOP1(AXI_M_IO_W_6_BASE_TO_TOP[1]),
+    .AXI_M_IO_W_6_BASE_TO_TOP2(AXI_M_IO_W_6_BASE_TO_TOP[2]),
+    .AXI_M_IO_W_6_BASE_TO_TOP3(AXI_M_IO_W_6_BASE_TO_TOP[3]),
+    .AXI_M_IO_W_6_BASE_TO_TOP4(AXI_M_IO_W_6_BASE_TO_TOP[4]),
+    .AXI_M_IO_W_6_BASE_TO_TOP5(AXI_M_IO_W_6_BASE_TO_TOP[5]),
+    .AXI_M_IO_W_6_BASE_TO_TOP6(AXI_M_IO_W_6_BASE_TO_TOP[6]),
+    .AXI_M_IO_W_6_BASE_TO_TOP7(AXI_M_IO_W_6_BASE_TO_TOP[7]),
+    .AXI_M_IO_W_6_BASE_TO_TOP8(AXI_M_IO_W_6_BASE_TO_TOP[8]),
+    .AXI_M_IO_W_6_BASE_TO_TOP9(AXI_M_IO_W_6_BASE_TO_TOP[9]),
+    .AXI_M_IO_W_6_BASE_TO_TOP10(AXI_M_IO_W_6_BASE_TO_TOP[10]),
+    .AXI_M_IO_W_6_BASE_TO_TOP11(AXI_M_IO_W_6_BASE_TO_TOP[11]),
+    .AXI_M_IO_W_6_BASE_TO_TOP12(AXI_M_IO_W_6_BASE_TO_TOP[12]),
+    .AXI_M_IO_W_6_BASE_TO_TOP13(AXI_M_IO_W_6_BASE_TO_TOP[13]),
     .AXI_M_IO_W_5_BASE_TO_TOP0(AXI_M_IO_W_5_BASE_TO_TOP[0]),
     .AXI_M_IO_W_5_BASE_TO_TOP1(AXI_M_IO_W_5_BASE_TO_TOP[1]),
     .AXI_M_IO_W_5_BASE_TO_TOP2(AXI_M_IO_W_5_BASE_TO_TOP[2]),
@@ -843,14 +1198,6 @@ AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
     .AXI_M_IO_W_5_BASE_TO_TOP13(AXI_M_IO_W_5_BASE_TO_TOP[13]),
     .AXI_M_IO_W_5_BASE_TO_TOP14(AXI_M_IO_W_5_BASE_TO_TOP[14]),
     .AXI_M_IO_W_5_BASE_TO_TOP15(AXI_M_IO_W_5_BASE_TO_TOP[15]),
-    .AXI_M_IO_W_5_BASE_TO_TOP16(AXI_M_IO_W_5_BASE_TO_TOP[16]),
-    .AXI_M_IO_W_5_BASE_TO_TOP17(AXI_M_IO_W_5_BASE_TO_TOP[17]),
-    .AXI_M_IO_W_5_BASE_TO_TOP18(AXI_M_IO_W_5_BASE_TO_TOP[18]),
-    .AXI_M_IO_W_5_BASE_TO_TOP19(AXI_M_IO_W_5_BASE_TO_TOP[19]),
-    .AXI_M_IO_W_5_BASE_TO_TOP20(AXI_M_IO_W_5_BASE_TO_TOP[20]),
-    .AXI_M_IO_W_5_BASE_TO_TOP21(AXI_M_IO_W_5_BASE_TO_TOP[21]),
-    .AXI_M_IO_W_5_BASE_TO_TOP22(AXI_M_IO_W_5_BASE_TO_TOP[22]),
-    .AXI_M_IO_W_5_BASE_TO_TOP23(AXI_M_IO_W_5_BASE_TO_TOP[23]),
     .AXI_M_IO_W_4_BASE_TO_TOP0(AXI_M_IO_W_4_BASE_TO_TOP[0]),
     .AXI_M_IO_W_4_BASE_TO_TOP1(AXI_M_IO_W_4_BASE_TO_TOP[1]),
     .AXI_M_IO_W_4_BASE_TO_TOP2(AXI_M_IO_W_4_BASE_TO_TOP[2]),
@@ -868,13 +1215,6 @@ AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
     .AXI_M_IO_W_4_BASE_TO_TOP14(AXI_M_IO_W_4_BASE_TO_TOP[14]),
     .AXI_M_IO_W_4_BASE_TO_TOP15(AXI_M_IO_W_4_BASE_TO_TOP[15]),
     .AXI_M_IO_W_4_BASE_TO_TOP16(AXI_M_IO_W_4_BASE_TO_TOP[16]),
-    .AXI_M_IO_W_4_BASE_TO_TOP17(AXI_M_IO_W_4_BASE_TO_TOP[17]),
-    .AXI_M_IO_W_4_BASE_TO_TOP18(AXI_M_IO_W_4_BASE_TO_TOP[18]),
-    .AXI_M_IO_W_4_BASE_TO_TOP19(AXI_M_IO_W_4_BASE_TO_TOP[19]),
-    .AXI_M_IO_W_4_BASE_TO_TOP20(AXI_M_IO_W_4_BASE_TO_TOP[20]),
-    .AXI_M_IO_W_4_BASE_TO_TOP21(AXI_M_IO_W_4_BASE_TO_TOP[21]),
-    .AXI_M_IO_W_4_BASE_TO_TOP22(AXI_M_IO_W_4_BASE_TO_TOP[22]),
-    .AXI_M_IO_W_4_BASE_TO_TOP23(AXI_M_IO_W_4_BASE_TO_TOP[23]),
     .AXI_M_IO_W_3_BASE_TO_TOP0(AXI_M_IO_W_3_BASE_TO_TOP[0]),
     .AXI_M_IO_W_3_BASE_TO_TOP1(AXI_M_IO_W_3_BASE_TO_TOP[1]),
     .AXI_M_IO_W_3_BASE_TO_TOP2(AXI_M_IO_W_3_BASE_TO_TOP[2]),
@@ -891,14 +1231,6 @@ AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
     .AXI_M_IO_W_3_BASE_TO_TOP13(AXI_M_IO_W_3_BASE_TO_TOP[13]),
     .AXI_M_IO_W_3_BASE_TO_TOP14(AXI_M_IO_W_3_BASE_TO_TOP[14]),
     .AXI_M_IO_W_3_BASE_TO_TOP15(AXI_M_IO_W_3_BASE_TO_TOP[15]),
-    .AXI_M_IO_W_3_BASE_TO_TOP16(AXI_M_IO_W_3_BASE_TO_TOP[16]),
-    .AXI_M_IO_W_3_BASE_TO_TOP17(AXI_M_IO_W_3_BASE_TO_TOP[17]),
-    .AXI_M_IO_W_3_BASE_TO_TOP18(AXI_M_IO_W_3_BASE_TO_TOP[18]),
-    .AXI_M_IO_W_3_BASE_TO_TOP19(AXI_M_IO_W_3_BASE_TO_TOP[19]),
-    .AXI_M_IO_W_3_BASE_TO_TOP20(AXI_M_IO_W_3_BASE_TO_TOP[20]),
-    .AXI_M_IO_W_3_BASE_TO_TOP21(AXI_M_IO_W_3_BASE_TO_TOP[21]),
-    .AXI_M_IO_W_3_BASE_TO_TOP22(AXI_M_IO_W_3_BASE_TO_TOP[22]),
-    .AXI_M_IO_W_3_BASE_TO_TOP23(AXI_M_IO_W_3_BASE_TO_TOP[23]),
     .AXI_M_IO_W_2_BASE_TO_TOP0(AXI_M_IO_W_2_BASE_TO_TOP[0]),
     .AXI_M_IO_W_2_BASE_TO_TOP1(AXI_M_IO_W_2_BASE_TO_TOP[1]),
     .AXI_M_IO_W_2_BASE_TO_TOP2(AXI_M_IO_W_2_BASE_TO_TOP[2]),
@@ -915,14 +1247,6 @@ AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
     .AXI_M_IO_W_2_BASE_TO_TOP13(AXI_M_IO_W_2_BASE_TO_TOP[13]),
     .AXI_M_IO_W_2_BASE_TO_TOP14(AXI_M_IO_W_2_BASE_TO_TOP[14]),
     .AXI_M_IO_W_2_BASE_TO_TOP15(AXI_M_IO_W_2_BASE_TO_TOP[15]),
-    .AXI_M_IO_W_2_BASE_TO_TOP16(AXI_M_IO_W_2_BASE_TO_TOP[16]),
-    .AXI_M_IO_W_2_BASE_TO_TOP17(AXI_M_IO_W_2_BASE_TO_TOP[17]),
-    .AXI_M_IO_W_2_BASE_TO_TOP18(AXI_M_IO_W_2_BASE_TO_TOP[18]),
-    .AXI_M_IO_W_2_BASE_TO_TOP19(AXI_M_IO_W_2_BASE_TO_TOP[19]),
-    .AXI_M_IO_W_2_BASE_TO_TOP20(AXI_M_IO_W_2_BASE_TO_TOP[20]),
-    .AXI_M_IO_W_2_BASE_TO_TOP21(AXI_M_IO_W_2_BASE_TO_TOP[21]),
-    .AXI_M_IO_W_2_BASE_TO_TOP22(AXI_M_IO_W_2_BASE_TO_TOP[22]),
-    .AXI_M_IO_W_2_BASE_TO_TOP23(AXI_M_IO_W_2_BASE_TO_TOP[23]),
     .AXI_M_IO_W_1_BASE_TO_TOP0(AXI_M_IO_W_1_BASE_TO_TOP[0]),
     .AXI_M_IO_W_1_BASE_TO_TOP1(AXI_M_IO_W_1_BASE_TO_TOP[1]),
     .AXI_M_IO_W_1_BASE_TO_TOP2(AXI_M_IO_W_1_BASE_TO_TOP[2]),
@@ -939,14 +1263,6 @@ AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
     .AXI_M_IO_W_1_BASE_TO_TOP13(AXI_M_IO_W_1_BASE_TO_TOP[13]),
     .AXI_M_IO_W_1_BASE_TO_TOP14(AXI_M_IO_W_1_BASE_TO_TOP[14]),
     .AXI_M_IO_W_1_BASE_TO_TOP15(AXI_M_IO_W_1_BASE_TO_TOP[15]),
-    .AXI_M_IO_W_1_BASE_TO_TOP16(AXI_M_IO_W_1_BASE_TO_TOP[16]),
-    .AXI_M_IO_W_1_BASE_TO_TOP17(AXI_M_IO_W_1_BASE_TO_TOP[17]),
-    .AXI_M_IO_W_1_BASE_TO_TOP18(AXI_M_IO_W_1_BASE_TO_TOP[18]),
-    .AXI_M_IO_W_1_BASE_TO_TOP19(AXI_M_IO_W_1_BASE_TO_TOP[19]),
-    .AXI_M_IO_W_1_BASE_TO_TOP20(AXI_M_IO_W_1_BASE_TO_TOP[20]),
-    .AXI_M_IO_W_1_BASE_TO_TOP21(AXI_M_IO_W_1_BASE_TO_TOP[21]),
-    .AXI_M_IO_W_1_BASE_TO_TOP22(AXI_M_IO_W_1_BASE_TO_TOP[22]),
-    .AXI_M_IO_W_1_BASE_TO_TOP23(AXI_M_IO_W_1_BASE_TO_TOP[23]),
     .AXI_M_IO_W_0_BASE_TO_TOP0(AXI_M_IO_W_0_BASE_TO_TOP[0]),
     .AXI_M_IO_W_0_BASE_TO_TOP1(AXI_M_IO_W_0_BASE_TO_TOP[1]),
     .AXI_M_IO_W_0_BASE_TO_TOP2(AXI_M_IO_W_0_BASE_TO_TOP[2]),
@@ -963,14 +1279,6 @@ AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
     .AXI_M_IO_W_0_BASE_TO_TOP13(AXI_M_IO_W_0_BASE_TO_TOP[13]),
     .AXI_M_IO_W_0_BASE_TO_TOP14(AXI_M_IO_W_0_BASE_TO_TOP[14]),
     .AXI_M_IO_W_0_BASE_TO_TOP15(AXI_M_IO_W_0_BASE_TO_TOP[15]),
-    .AXI_M_IO_W_0_BASE_TO_TOP16(AXI_M_IO_W_0_BASE_TO_TOP[16]),
-    .AXI_M_IO_W_0_BASE_TO_TOP17(AXI_M_IO_W_0_BASE_TO_TOP[17]),
-    .AXI_M_IO_W_0_BASE_TO_TOP18(AXI_M_IO_W_0_BASE_TO_TOP[18]),
-    .AXI_M_IO_W_0_BASE_TO_TOP19(AXI_M_IO_W_0_BASE_TO_TOP[19]),
-    .AXI_M_IO_W_0_BASE_TO_TOP20(AXI_M_IO_W_0_BASE_TO_TOP[20]),
-    .AXI_M_IO_W_0_BASE_TO_TOP21(AXI_M_IO_W_0_BASE_TO_TOP[21]),
-    .AXI_M_IO_W_0_BASE_TO_TOP22(AXI_M_IO_W_0_BASE_TO_TOP[22]),
-    .AXI_M_IO_W_0_BASE_TO_TOP23(AXI_M_IO_W_0_BASE_TO_TOP[23]),
     .AXI_M_FAB_AWADDR0(AXI_M_FAB_AWADDR0),
     .AXI_M_FAB_AWADDR1(AXI_M_FAB_AWADDR1),
     .AXI_M_FAB_AWADDR2(AXI_M_FAB_AWADDR2),
@@ -1016,6 +1324,11 @@ AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
     .AXI_M_FAB_AWSIZE2(AXI_M_FAB_AWSIZE2),
     .AXI_M_FAB_AWBURST0(AXI_M_FAB_AWBURST0),
     .AXI_M_FAB_AWBURST1(AXI_M_FAB_AWBURST1),
+    .AXI_M_FAB_AWLOCK(AXI_M_FAB_AWLOCK),
+    .AXI_M_FAB_AWCACHE0(AXI_M_FAB_AWCACHE0),
+    .AXI_M_FAB_AWCACHE1(AXI_M_FAB_AWCACHE1),
+    .AXI_M_FAB_AWCACHE2(AXI_M_FAB_AWCACHE2),
+    .AXI_M_FAB_AWCACHE3(AXI_M_FAB_AWCACHE3),
     .AXI_M_FAB_AWVALID(AXI_M_FAB_AWVALID),
     .AXI_M_FAB_WDATA0(AXI_M_FAB_WDATA0),
     .AXI_M_FAB_WDATA1(AXI_M_FAB_WDATA1),
@@ -1101,6 +1414,11 @@ AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
     .AXI_M_FAB_ARSIZE2(AXI_M_FAB_ARSIZE2),
     .AXI_M_FAB_ARBURST0(AXI_M_FAB_ARBURST0),
     .AXI_M_FAB_ARBURST1(AXI_M_FAB_ARBURST1),
+    .AXI_M_FAB_ARLOCK(AXI_M_FAB_ARLOCK),
+    .AXI_M_FAB_ARCACHE0(AXI_M_FAB_ARCACHE0),
+    .AXI_M_FAB_ARCACHE1(AXI_M_FAB_ARCACHE1),
+    .AXI_M_FAB_ARCACHE2(AXI_M_FAB_ARCACHE2),
+    .AXI_M_FAB_ARCACHE3(AXI_M_FAB_ARCACHE3),
     .AXI_M_FAB_ARVALID(AXI_M_FAB_ARVALID),
     .AXI_M_FAB_RREADY(AXI_M_FAB_RREADY),
     .AXI_M_FAB_AWREADY(AXI_M_FAB_AWREADY),
@@ -1145,22 +1463,16 @@ AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
     .AXI_M_FAB_RRESP1(AXI_M_FAB_RRESP1),
     .AXI_M_FAB_RLAST(AXI_M_FAB_RLAST),
     .AXI_M_FAB_RVALID(AXI_M_FAB_RVALID),
+    .AXI_M_IO_W_8_TOP_TO_BASE0(AXI_M_IO_W_8_TOP_TO_BASE[0]),
+    .AXI_M_IO_W_7_TOP_TO_BASE0(AXI_M_IO_W_7_TOP_TO_BASE[0]),
+    .AXI_M_IO_W_6_TOP_TO_BASE0(AXI_M_IO_W_6_TOP_TO_BASE[0]),
+    .AXI_M_IO_W_6_TOP_TO_BASE1(AXI_M_IO_W_6_TOP_TO_BASE[1]),
     .AXI_M_IO_W_5_TOP_TO_BASE0(AXI_M_IO_W_5_TOP_TO_BASE[0]),
     .AXI_M_IO_W_5_TOP_TO_BASE1(AXI_M_IO_W_5_TOP_TO_BASE[1]),
-    .AXI_M_IO_W_5_TOP_TO_BASE2(AXI_M_IO_W_5_TOP_TO_BASE[2]),
-    .AXI_M_IO_W_5_TOP_TO_BASE3(AXI_M_IO_W_5_TOP_TO_BASE[3]),
-    .AXI_M_IO_W_5_TOP_TO_BASE4(AXI_M_IO_W_5_TOP_TO_BASE[4]),
-    .AXI_M_IO_W_5_TOP_TO_BASE5(AXI_M_IO_W_5_TOP_TO_BASE[5]),
-    .AXI_M_IO_W_5_TOP_TO_BASE6(AXI_M_IO_W_5_TOP_TO_BASE[6]),
-    .AXI_M_IO_W_5_TOP_TO_BASE7(AXI_M_IO_W_5_TOP_TO_BASE[7]),
     .AXI_M_IO_W_4_TOP_TO_BASE0(AXI_M_IO_W_4_TOP_TO_BASE[0]),
     .AXI_M_IO_W_4_TOP_TO_BASE1(AXI_M_IO_W_4_TOP_TO_BASE[1]),
     .AXI_M_IO_W_4_TOP_TO_BASE2(AXI_M_IO_W_4_TOP_TO_BASE[2]),
     .AXI_M_IO_W_4_TOP_TO_BASE3(AXI_M_IO_W_4_TOP_TO_BASE[3]),
-    .AXI_M_IO_W_4_TOP_TO_BASE4(AXI_M_IO_W_4_TOP_TO_BASE[4]),
-    .AXI_M_IO_W_4_TOP_TO_BASE5(AXI_M_IO_W_4_TOP_TO_BASE[5]),
-    .AXI_M_IO_W_4_TOP_TO_BASE6(AXI_M_IO_W_4_TOP_TO_BASE[6]),
-    .AXI_M_IO_W_4_TOP_TO_BASE7(AXI_M_IO_W_4_TOP_TO_BASE[7]),
     .AXI_M_IO_W_3_TOP_TO_BASE0(AXI_M_IO_W_3_TOP_TO_BASE[0]),
     .AXI_M_IO_W_3_TOP_TO_BASE1(AXI_M_IO_W_3_TOP_TO_BASE[1]),
     .AXI_M_IO_W_3_TOP_TO_BASE2(AXI_M_IO_W_3_TOP_TO_BASE[2]),
@@ -1192,9 +1504,7 @@ AXI_M_IO_W_switch_matrix Inst_AXI_M_IO_W_switch_matrix (
     .AXI_M_IO_W_0_TOP_TO_BASE4(AXI_M_IO_W_0_TOP_TO_BASE[4]),
     .AXI_M_IO_W_0_TOP_TO_BASE5(AXI_M_IO_W_0_TOP_TO_BASE[5]),
     .AXI_M_IO_W_0_TOP_TO_BASE6(AXI_M_IO_W_0_TOP_TO_BASE[6]),
-    .AXI_M_IO_W_0_TOP_TO_BASE7(AXI_M_IO_W_0_TOP_TO_BASE[7]),
-    .ConfigBits(ST_ConfigBits[12-1:0]),
-    .ConfigBits_N(ST_ConfigBits_N[12-1:0])
+    .AXI_M_IO_W_0_TOP_TO_BASE7(AXI_M_IO_W_0_TOP_TO_BASE[7])
 );
 
 AXI_M_BEL Inst_ST_AXI_M_AXI_M_BEL (
@@ -1202,31 +1512,37 @@ AXI_M_BEL Inst_ST_AXI_M_AXI_M_BEL (
     .FAB_AWLEN({AXI_M_FAB_AWLEN7, AXI_M_FAB_AWLEN6, AXI_M_FAB_AWLEN5, AXI_M_FAB_AWLEN4, AXI_M_FAB_AWLEN3, AXI_M_FAB_AWLEN2, AXI_M_FAB_AWLEN1, AXI_M_FAB_AWLEN0}),
     .FAB_AWSIZE({AXI_M_FAB_AWSIZE2, AXI_M_FAB_AWSIZE1, AXI_M_FAB_AWSIZE0}),
     .FAB_AWBURST({AXI_M_FAB_AWBURST1, AXI_M_FAB_AWBURST0}),
+    .FAB_AWLOCK(AXI_M_FAB_AWLOCK),
+    .FAB_AWCACHE({AXI_M_FAB_AWCACHE3, AXI_M_FAB_AWCACHE2, AXI_M_FAB_AWCACHE1, AXI_M_FAB_AWCACHE0}),
     .FAB_AWVALID(AXI_M_FAB_AWVALID),
+    .FAB_AWREADY(AXI_M_FAB_AWREADY),
     .FAB_WDATA({AXI_M_FAB_WDATA31, AXI_M_FAB_WDATA30, AXI_M_FAB_WDATA29, AXI_M_FAB_WDATA28, AXI_M_FAB_WDATA27, AXI_M_FAB_WDATA26, AXI_M_FAB_WDATA25, AXI_M_FAB_WDATA24, AXI_M_FAB_WDATA23, AXI_M_FAB_WDATA22, AXI_M_FAB_WDATA21, AXI_M_FAB_WDATA20, AXI_M_FAB_WDATA19, AXI_M_FAB_WDATA18, AXI_M_FAB_WDATA17, AXI_M_FAB_WDATA16, AXI_M_FAB_WDATA15, AXI_M_FAB_WDATA14, AXI_M_FAB_WDATA13, AXI_M_FAB_WDATA12, AXI_M_FAB_WDATA11, AXI_M_FAB_WDATA10, AXI_M_FAB_WDATA9, AXI_M_FAB_WDATA8, AXI_M_FAB_WDATA7, AXI_M_FAB_WDATA6, AXI_M_FAB_WDATA5, AXI_M_FAB_WDATA4, AXI_M_FAB_WDATA3, AXI_M_FAB_WDATA2, AXI_M_FAB_WDATA1, AXI_M_FAB_WDATA0}),
     .FAB_WSTRB({AXI_M_FAB_WSTRB3, AXI_M_FAB_WSTRB2, AXI_M_FAB_WSTRB1, AXI_M_FAB_WSTRB0}),
     .FAB_WLAST(AXI_M_FAB_WLAST),
     .FAB_WVALID(AXI_M_FAB_WVALID),
+    .FAB_WREADY(AXI_M_FAB_WREADY),
+    .FAB_BRESP({AXI_M_FAB_BRESP1, AXI_M_FAB_BRESP0}),
+    .FAB_BVALID(AXI_M_FAB_BVALID),
     .FAB_BREADY(AXI_M_FAB_BREADY),
     .FAB_ARADDR({AXI_M_FAB_ARADDR31, AXI_M_FAB_ARADDR30, AXI_M_FAB_ARADDR29, AXI_M_FAB_ARADDR28, AXI_M_FAB_ARADDR27, AXI_M_FAB_ARADDR26, AXI_M_FAB_ARADDR25, AXI_M_FAB_ARADDR24, AXI_M_FAB_ARADDR23, AXI_M_FAB_ARADDR22, AXI_M_FAB_ARADDR21, AXI_M_FAB_ARADDR20, AXI_M_FAB_ARADDR19, AXI_M_FAB_ARADDR18, AXI_M_FAB_ARADDR17, AXI_M_FAB_ARADDR16, AXI_M_FAB_ARADDR15, AXI_M_FAB_ARADDR14, AXI_M_FAB_ARADDR13, AXI_M_FAB_ARADDR12, AXI_M_FAB_ARADDR11, AXI_M_FAB_ARADDR10, AXI_M_FAB_ARADDR9, AXI_M_FAB_ARADDR8, AXI_M_FAB_ARADDR7, AXI_M_FAB_ARADDR6, AXI_M_FAB_ARADDR5, AXI_M_FAB_ARADDR4, AXI_M_FAB_ARADDR3, AXI_M_FAB_ARADDR2, AXI_M_FAB_ARADDR1, AXI_M_FAB_ARADDR0}),
     .FAB_ARLEN({AXI_M_FAB_ARLEN7, AXI_M_FAB_ARLEN6, AXI_M_FAB_ARLEN5, AXI_M_FAB_ARLEN4, AXI_M_FAB_ARLEN3, AXI_M_FAB_ARLEN2, AXI_M_FAB_ARLEN1, AXI_M_FAB_ARLEN0}),
     .FAB_ARSIZE({AXI_M_FAB_ARSIZE2, AXI_M_FAB_ARSIZE1, AXI_M_FAB_ARSIZE0}),
     .FAB_ARBURST({AXI_M_FAB_ARBURST1, AXI_M_FAB_ARBURST0}),
+    .FAB_ARLOCK(AXI_M_FAB_ARLOCK),
+    .FAB_ARCACHE({AXI_M_FAB_ARCACHE3, AXI_M_FAB_ARCACHE2, AXI_M_FAB_ARCACHE1, AXI_M_FAB_ARCACHE0}),
     .FAB_ARVALID(AXI_M_FAB_ARVALID),
-    .FAB_RREADY(AXI_M_FAB_RREADY),
-    .FAB_AWREADY(AXI_M_FAB_AWREADY),
-    .FAB_WREADY(AXI_M_FAB_WREADY),
-    .FAB_BRESP({AXI_M_FAB_BRESP1, AXI_M_FAB_BRESP0}),
-    .FAB_BVALID(AXI_M_FAB_BVALID),
     .FAB_ARREADY(AXI_M_FAB_ARREADY),
     .FAB_RDATA({AXI_M_FAB_RDATA31, AXI_M_FAB_RDATA30, AXI_M_FAB_RDATA29, AXI_M_FAB_RDATA28, AXI_M_FAB_RDATA27, AXI_M_FAB_RDATA26, AXI_M_FAB_RDATA25, AXI_M_FAB_RDATA24, AXI_M_FAB_RDATA23, AXI_M_FAB_RDATA22, AXI_M_FAB_RDATA21, AXI_M_FAB_RDATA20, AXI_M_FAB_RDATA19, AXI_M_FAB_RDATA18, AXI_M_FAB_RDATA17, AXI_M_FAB_RDATA16, AXI_M_FAB_RDATA15, AXI_M_FAB_RDATA14, AXI_M_FAB_RDATA13, AXI_M_FAB_RDATA12, AXI_M_FAB_RDATA11, AXI_M_FAB_RDATA10, AXI_M_FAB_RDATA9, AXI_M_FAB_RDATA8, AXI_M_FAB_RDATA7, AXI_M_FAB_RDATA6, AXI_M_FAB_RDATA5, AXI_M_FAB_RDATA4, AXI_M_FAB_RDATA3, AXI_M_FAB_RDATA2, AXI_M_FAB_RDATA1, AXI_M_FAB_RDATA0}),
     .FAB_RRESP({AXI_M_FAB_RRESP1, AXI_M_FAB_RRESP0}),
     .FAB_RLAST(AXI_M_FAB_RLAST),
     .FAB_RVALID(AXI_M_FAB_RVALID),
+    .FAB_RREADY(AXI_M_FAB_RREADY),
     .SOC_AWADDR({AXI_M_SOC_AWADDR31, AXI_M_SOC_AWADDR30, AXI_M_SOC_AWADDR29, AXI_M_SOC_AWADDR28, AXI_M_SOC_AWADDR27, AXI_M_SOC_AWADDR26, AXI_M_SOC_AWADDR25, AXI_M_SOC_AWADDR24, AXI_M_SOC_AWADDR23, AXI_M_SOC_AWADDR22, AXI_M_SOC_AWADDR21, AXI_M_SOC_AWADDR20, AXI_M_SOC_AWADDR19, AXI_M_SOC_AWADDR18, AXI_M_SOC_AWADDR17, AXI_M_SOC_AWADDR16, AXI_M_SOC_AWADDR15, AXI_M_SOC_AWADDR14, AXI_M_SOC_AWADDR13, AXI_M_SOC_AWADDR12, AXI_M_SOC_AWADDR11, AXI_M_SOC_AWADDR10, AXI_M_SOC_AWADDR9, AXI_M_SOC_AWADDR8, AXI_M_SOC_AWADDR7, AXI_M_SOC_AWADDR6, AXI_M_SOC_AWADDR5, AXI_M_SOC_AWADDR4, AXI_M_SOC_AWADDR3, AXI_M_SOC_AWADDR2, AXI_M_SOC_AWADDR1, AXI_M_SOC_AWADDR0}),
     .SOC_AWLEN({AXI_M_SOC_AWLEN7, AXI_M_SOC_AWLEN6, AXI_M_SOC_AWLEN5, AXI_M_SOC_AWLEN4, AXI_M_SOC_AWLEN3, AXI_M_SOC_AWLEN2, AXI_M_SOC_AWLEN1, AXI_M_SOC_AWLEN0}),
     .SOC_AWSIZE({AXI_M_SOC_AWSIZE2, AXI_M_SOC_AWSIZE1, AXI_M_SOC_AWSIZE0}),
     .SOC_AWBURST({AXI_M_SOC_AWBURST1, AXI_M_SOC_AWBURST0}),
+    .SOC_AWLOCK(AXI_M_SOC_AWLOCK),
+    .SOC_AWCACHE({AXI_M_SOC_AWCACHE3, AXI_M_SOC_AWCACHE2, AXI_M_SOC_AWCACHE1, AXI_M_SOC_AWCACHE0}),
     .SOC_AWVALID(AXI_M_SOC_AWVALID),
     .SOC_AWREADY(AXI_M_SOC_AWREADY),
     .SOC_WDATA({AXI_M_SOC_WDATA31, AXI_M_SOC_WDATA30, AXI_M_SOC_WDATA29, AXI_M_SOC_WDATA28, AXI_M_SOC_WDATA27, AXI_M_SOC_WDATA26, AXI_M_SOC_WDATA25, AXI_M_SOC_WDATA24, AXI_M_SOC_WDATA23, AXI_M_SOC_WDATA22, AXI_M_SOC_WDATA21, AXI_M_SOC_WDATA20, AXI_M_SOC_WDATA19, AXI_M_SOC_WDATA18, AXI_M_SOC_WDATA17, AXI_M_SOC_WDATA16, AXI_M_SOC_WDATA15, AXI_M_SOC_WDATA14, AXI_M_SOC_WDATA13, AXI_M_SOC_WDATA12, AXI_M_SOC_WDATA11, AXI_M_SOC_WDATA10, AXI_M_SOC_WDATA9, AXI_M_SOC_WDATA8, AXI_M_SOC_WDATA7, AXI_M_SOC_WDATA6, AXI_M_SOC_WDATA5, AXI_M_SOC_WDATA4, AXI_M_SOC_WDATA3, AXI_M_SOC_WDATA2, AXI_M_SOC_WDATA1, AXI_M_SOC_WDATA0}),
@@ -1241,6 +1557,8 @@ AXI_M_BEL Inst_ST_AXI_M_AXI_M_BEL (
     .SOC_ARLEN({AXI_M_SOC_ARLEN7, AXI_M_SOC_ARLEN6, AXI_M_SOC_ARLEN5, AXI_M_SOC_ARLEN4, AXI_M_SOC_ARLEN3, AXI_M_SOC_ARLEN2, AXI_M_SOC_ARLEN1, AXI_M_SOC_ARLEN0}),
     .SOC_ARSIZE({AXI_M_SOC_ARSIZE2, AXI_M_SOC_ARSIZE1, AXI_M_SOC_ARSIZE0}),
     .SOC_ARBURST({AXI_M_SOC_ARBURST1, AXI_M_SOC_ARBURST0}),
+    .SOC_ARLOCK(AXI_M_SOC_ARLOCK),
+    .SOC_ARCACHE({AXI_M_SOC_ARCACHE3, AXI_M_SOC_ARCACHE2, AXI_M_SOC_ARCACHE1, AXI_M_SOC_ARCACHE0}),
     .SOC_ARVALID(AXI_M_SOC_ARVALID),
     .SOC_ARREADY(AXI_M_SOC_ARREADY),
     .SOC_RDATA({AXI_M_SOC_RDATA31, AXI_M_SOC_RDATA30, AXI_M_SOC_RDATA29, AXI_M_SOC_RDATA28, AXI_M_SOC_RDATA27, AXI_M_SOC_RDATA26, AXI_M_SOC_RDATA25, AXI_M_SOC_RDATA24, AXI_M_SOC_RDATA23, AXI_M_SOC_RDATA22, AXI_M_SOC_RDATA21, AXI_M_SOC_RDATA20, AXI_M_SOC_RDATA19, AXI_M_SOC_RDATA18, AXI_M_SOC_RDATA17, AXI_M_SOC_RDATA16, AXI_M_SOC_RDATA15, AXI_M_SOC_RDATA14, AXI_M_SOC_RDATA13, AXI_M_SOC_RDATA12, AXI_M_SOC_RDATA11, AXI_M_SOC_RDATA10, AXI_M_SOC_RDATA9, AXI_M_SOC_RDATA8, AXI_M_SOC_RDATA7, AXI_M_SOC_RDATA6, AXI_M_SOC_RDATA5, AXI_M_SOC_RDATA4, AXI_M_SOC_RDATA3, AXI_M_SOC_RDATA2, AXI_M_SOC_RDATA1, AXI_M_SOC_RDATA0}),
@@ -1248,7 +1566,7 @@ AXI_M_BEL Inst_ST_AXI_M_AXI_M_BEL (
     .SOC_RLAST(AXI_M_SOC_RLAST),
     .SOC_RVALID(AXI_M_SOC_RVALID),
     .SOC_RREADY(AXI_M_SOC_RREADY),
-    .ConfigBits(ST_ConfigBits[20-1:12])
+    .ConfigBits(ST_ConfigBits[12-1:0])
 );
 
 endmodule

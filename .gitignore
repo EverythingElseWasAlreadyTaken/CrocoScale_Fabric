@@ -1,0 +1,4 @@
+# Yosys JSON output: FABulous BEL parse caches and compile_design netlists
+Tile/**/*.json
+user_design/*.json
+.FABulous/.fabulous_history

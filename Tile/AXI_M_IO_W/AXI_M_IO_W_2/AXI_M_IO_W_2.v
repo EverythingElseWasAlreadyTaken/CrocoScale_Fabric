@@ -5,7 +5,7 @@ module AXI_M_IO_W_2
 `endif
         parameter MaxFramesPerCol=20,
         parameter FrameBitsPerRow=32,
-        parameter NoConfigBits=272
+        parameter NoConfigBits=256
     )
     (
  //N
@@ -38,7 +38,7 @@ module AXI_M_IO_W_2
         output  [7:0] S2BEGb,        //TilePort({S} OUTPUT S2BEGb[7:0])
         output  [15:0] S4BEG,        //TilePort({S} OUTPUT S4BEG[3:0])
     //SJUMP ports (supertile BEL interface)
-        output  [24-1:0] BASE_TO_TOP,
+        output  [16-1:0] BASE_TO_TOP,
         input  [8-1:0] TOP_TO_BASE,
     //Tile IO ports from BELs
         input  UserCLK,
@@ -1123,14 +1123,6 @@ AXI_M_IO_W_2_switch_matrix Inst_AXI_M_IO_W_2_switch_matrix (
     .BASE_TO_TOP13(BASE_TO_TOP[13]),
     .BASE_TO_TOP14(BASE_TO_TOP[14]),
     .BASE_TO_TOP15(BASE_TO_TOP[15]),
-    .BASE_TO_TOP16(BASE_TO_TOP[16]),
-    .BASE_TO_TOP17(BASE_TO_TOP[17]),
-    .BASE_TO_TOP18(BASE_TO_TOP[18]),
-    .BASE_TO_TOP19(BASE_TO_TOP[19]),
-    .BASE_TO_TOP20(BASE_TO_TOP[20]),
-    .BASE_TO_TOP21(BASE_TO_TOP[21]),
-    .BASE_TO_TOP22(BASE_TO_TOP[22]),
-    .BASE_TO_TOP23(BASE_TO_TOP[23]),
     .TOP_TO_BASE0(TOP_TO_BASE[0]),
     .TOP_TO_BASE1(TOP_TO_BASE[1]),
     .TOP_TO_BASE2(TOP_TO_BASE[2]),
@@ -1139,8 +1131,8 @@ AXI_M_IO_W_2_switch_matrix Inst_AXI_M_IO_W_2_switch_matrix (
     .TOP_TO_BASE5(TOP_TO_BASE[5]),
     .TOP_TO_BASE6(TOP_TO_BASE[6]),
     .TOP_TO_BASE7(TOP_TO_BASE[7]),
-    .ConfigBits(ConfigBits[272-1:0]),
-    .ConfigBits_N(ConfigBits_N[272-1:0])
+    .ConfigBits(ConfigBits[256-1:0]),
+    .ConfigBits_N(ConfigBits_N[256-1:0])
 );
 
 endmodule

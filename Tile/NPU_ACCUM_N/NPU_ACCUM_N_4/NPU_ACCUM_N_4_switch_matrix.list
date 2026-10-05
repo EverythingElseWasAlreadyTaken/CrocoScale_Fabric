@@ -1,0 +1,14 @@
+# NPU_ACCUM_N subtile: 3 BEL inputs (BASE_TO_TOP), 0 BEL outputs (TOP_TO_BASE).
+
+# BEL inputs: WDATA on the quads by depth (LSB 4 rows deep),
+# ADDR, WE, READ_BANK_SEL on ends launched 1-2 rows below.
+{4}BASE_TO_TOP0,[N1END0|N2MID0|N2END7|N2MID7]
+{4}BASE_TO_TOP1,[N1END1|N2MID1|N2END6|N2MID6]
+{4}BASE_TO_TOP2,[N1END2|N2MID2|N2END5|N2MID5]
+
+# No BEL outputs: every south wire is plain turnaround.
+S4BEG[0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15],N4END[15|14|13|12|11|10|9|8|7|6|5|4|3|2|1|0]
+SS4BEG[0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15],NN4END[15|14|13|12|11|10|9|8|7|6|5|4|3|2|1|0]
+S2BEGb[0|1|2|3|4|5|6|7],N2END[7|6|5|4|3|2|1|0]
+S2BEG[0|1|2|3|4|5|6|7],N2MID[7|6|5|4|3|2|1|0]
+S1BEG[0|1|2|3],N1END[3|2|1|0]

@@ -29,10 +29,9 @@ JUMP,J_NS1_BEG,0,0,J_NS1_END,4,,,,,,,,,,,,,
 JUMP,NULL,0,0,GND,1,,,,,,,,,,,,,
 JUMP,NULL,0,0,VCC,1,,,,,,,,,,,,,
 
-SJUMP,BASE_TO_TOP,0,0,NULL,12,,,
-SJUMP,NULL,0,0,TOP_TO_BASE,16,,,
+SJUMP,BASE_TO_TOP,0,0,NULL,8,,,
+SJUMP,NULL,0,0,TOP_TO_BASE,14,,,
 
-MATRIX,./AXIL_S_IO_W_3_switch_matrix.list,,,,,,,,,,,,,,,,,
-
+MATRIX,./AXIL_S_IO_W_3_switch_matrix.list
 
 EndTILE,,,,,,,,,,,,,,,,,,
