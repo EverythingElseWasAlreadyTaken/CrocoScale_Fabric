@@ -642,6 +642,7 @@ module eFPGA
         output  Tile_X10Y1_NPU_XBAR_SEL1, //EXTERNAL
         output  Tile_X10Y1_NPU_XBAR_SEL2, //EXTERNAL
         output  Tile_X10Y1_NPU_XBAR_SEL3, //EXTERNAL
+        output  Tile_X10Y1_FAB_USER_CLK, //EXTERNAL
         input  Tile_X10Y3_NPU_ACT_RDATA0, //EXTERNAL
         input  Tile_X10Y3_NPU_ACT_RDATA1, //EXTERNAL
         input  Tile_X10Y3_NPU_ACT_RDATA2, //EXTERNAL
@@ -689,6 +690,7 @@ module eFPGA
         output  Tile_X10Y3_NPU_XBAR_SEL1, //EXTERNAL
         output  Tile_X10Y3_NPU_XBAR_SEL2, //EXTERNAL
         output  Tile_X10Y3_NPU_XBAR_SEL3, //EXTERNAL
+        output  Tile_X10Y3_FAB_USER_CLK, //EXTERNAL
         input  Tile_X10Y5_NPU_ACT_RDATA0, //EXTERNAL
         input  Tile_X10Y5_NPU_ACT_RDATA1, //EXTERNAL
         input  Tile_X10Y5_NPU_ACT_RDATA2, //EXTERNAL
@@ -736,6 +738,7 @@ module eFPGA
         output  Tile_X10Y5_NPU_XBAR_SEL1, //EXTERNAL
         output  Tile_X10Y5_NPU_XBAR_SEL2, //EXTERNAL
         output  Tile_X10Y5_NPU_XBAR_SEL3, //EXTERNAL
+        output  Tile_X10Y5_FAB_USER_CLK, //EXTERNAL
         input  Tile_X10Y7_NPU_ACT_RDATA0, //EXTERNAL
         input  Tile_X10Y7_NPU_ACT_RDATA1, //EXTERNAL
         input  Tile_X10Y7_NPU_ACT_RDATA2, //EXTERNAL
@@ -783,6 +786,7 @@ module eFPGA
         output  Tile_X10Y7_NPU_XBAR_SEL1, //EXTERNAL
         output  Tile_X10Y7_NPU_XBAR_SEL2, //EXTERNAL
         output  Tile_X10Y7_NPU_XBAR_SEL3, //EXTERNAL
+        output  Tile_X10Y7_FAB_USER_CLK, //EXTERNAL
         input  Tile_X10Y9_NPU_ACT_RDATA0, //EXTERNAL
         input  Tile_X10Y9_NPU_ACT_RDATA1, //EXTERNAL
         input  Tile_X10Y9_NPU_ACT_RDATA2, //EXTERNAL
@@ -830,6 +834,7 @@ module eFPGA
         output  Tile_X10Y9_NPU_XBAR_SEL1, //EXTERNAL
         output  Tile_X10Y9_NPU_XBAR_SEL2, //EXTERNAL
         output  Tile_X10Y9_NPU_XBAR_SEL3, //EXTERNAL
+        output  Tile_X10Y9_FAB_USER_CLK, //EXTERNAL
         input  Tile_X10Y11_NPU_ACT_RDATA0, //EXTERNAL
         input  Tile_X10Y11_NPU_ACT_RDATA1, //EXTERNAL
         input  Tile_X10Y11_NPU_ACT_RDATA2, //EXTERNAL
@@ -877,6 +882,7 @@ module eFPGA
         output  Tile_X10Y11_NPU_XBAR_SEL1, //EXTERNAL
         output  Tile_X10Y11_NPU_XBAR_SEL2, //EXTERNAL
         output  Tile_X10Y11_NPU_XBAR_SEL3, //EXTERNAL
+        output  Tile_X10Y11_FAB_USER_CLK, //EXTERNAL
         input  Tile_X10Y13_NPU_ACT_RDATA0, //EXTERNAL
         input  Tile_X10Y13_NPU_ACT_RDATA1, //EXTERNAL
         input  Tile_X10Y13_NPU_ACT_RDATA2, //EXTERNAL
@@ -924,6 +930,7 @@ module eFPGA
         output  Tile_X10Y13_NPU_XBAR_SEL1, //EXTERNAL
         output  Tile_X10Y13_NPU_XBAR_SEL2, //EXTERNAL
         output  Tile_X10Y13_NPU_XBAR_SEL3, //EXTERNAL
+        output  Tile_X10Y13_FAB_USER_CLK, //EXTERNAL
         input  Tile_X10Y15_NPU_ACT_RDATA0, //EXTERNAL
         input  Tile_X10Y15_NPU_ACT_RDATA1, //EXTERNAL
         input  Tile_X10Y15_NPU_ACT_RDATA2, //EXTERNAL
@@ -971,6 +978,7 @@ module eFPGA
         output  Tile_X10Y15_NPU_XBAR_SEL1, //EXTERNAL
         output  Tile_X10Y15_NPU_XBAR_SEL2, //EXTERNAL
         output  Tile_X10Y15_NPU_XBAR_SEL3, //EXTERNAL
+        output  Tile_X10Y15_FAB_USER_CLK, //EXTERNAL
         input  [(FrameBitsPerRow*18)-1:0] FrameData, //CONFIG_PORT
         input  [(MaxFramesPerCol*11)-1:0] FrameStrobe, //CONFIG_PORT
         input  UserCLK
@@ -6523,6 +6531,7 @@ assign Column_X10_FrameStrobe = FrameStrobe[MaxFramesPerCol*(10+1)-1:MaxFramesPe
     .NPU_XBAR_SEL1(Tile_X10Y1_NPU_XBAR_SEL1),
     .NPU_XBAR_SEL2(Tile_X10Y1_NPU_XBAR_SEL2),
     .NPU_XBAR_SEL3(Tile_X10Y1_NPU_XBAR_SEL3),
+    .FAB_USER_CLK(Tile_X10Y1_FAB_USER_CLK),
     .Tile_X0Y0_UserCLK(Tile_X9Y1_UserCLKo),
     .Tile_X0Y0_UserCLKo(Tile_X10Y1_UserCLKo),
     .Tile_X0Y1_UserCLK(Tile_X9Y2_UserCLKo),
@@ -7709,6 +7718,7 @@ assign Column_X10_FrameStrobe = FrameStrobe[MaxFramesPerCol*(10+1)-1:MaxFramesPe
     .NPU_XBAR_SEL1(Tile_X10Y3_NPU_XBAR_SEL1),
     .NPU_XBAR_SEL2(Tile_X10Y3_NPU_XBAR_SEL2),
     .NPU_XBAR_SEL3(Tile_X10Y3_NPU_XBAR_SEL3),
+    .FAB_USER_CLK(Tile_X10Y3_FAB_USER_CLK),
     .Tile_X0Y0_UserCLK(Tile_X9Y3_UserCLKo),
     .Tile_X0Y0_UserCLKo(Tile_X10Y3_UserCLKo),
     .Tile_X0Y1_UserCLK(Tile_X9Y4_UserCLKo),
@@ -8895,6 +8905,7 @@ assign Column_X10_FrameStrobe = FrameStrobe[MaxFramesPerCol*(10+1)-1:MaxFramesPe
     .NPU_XBAR_SEL1(Tile_X10Y5_NPU_XBAR_SEL1),
     .NPU_XBAR_SEL2(Tile_X10Y5_NPU_XBAR_SEL2),
     .NPU_XBAR_SEL3(Tile_X10Y5_NPU_XBAR_SEL3),
+    .FAB_USER_CLK(Tile_X10Y5_FAB_USER_CLK),
     .Tile_X0Y0_UserCLK(Tile_X9Y5_UserCLKo),
     .Tile_X0Y0_UserCLKo(Tile_X10Y5_UserCLKo),
     .Tile_X0Y1_UserCLK(Tile_X9Y6_UserCLKo),
@@ -10081,6 +10092,7 @@ assign Column_X10_FrameStrobe = FrameStrobe[MaxFramesPerCol*(10+1)-1:MaxFramesPe
     .NPU_XBAR_SEL1(Tile_X10Y7_NPU_XBAR_SEL1),
     .NPU_XBAR_SEL2(Tile_X10Y7_NPU_XBAR_SEL2),
     .NPU_XBAR_SEL3(Tile_X10Y7_NPU_XBAR_SEL3),
+    .FAB_USER_CLK(Tile_X10Y7_FAB_USER_CLK),
     .Tile_X0Y0_UserCLK(Tile_X9Y7_UserCLKo),
     .Tile_X0Y0_UserCLKo(Tile_X10Y7_UserCLKo),
     .Tile_X0Y1_UserCLK(Tile_X9Y8_UserCLKo),
@@ -11267,6 +11279,7 @@ assign Column_X10_FrameStrobe = FrameStrobe[MaxFramesPerCol*(10+1)-1:MaxFramesPe
     .NPU_XBAR_SEL1(Tile_X10Y9_NPU_XBAR_SEL1),
     .NPU_XBAR_SEL2(Tile_X10Y9_NPU_XBAR_SEL2),
     .NPU_XBAR_SEL3(Tile_X10Y9_NPU_XBAR_SEL3),
+    .FAB_USER_CLK(Tile_X10Y9_FAB_USER_CLK),
     .Tile_X0Y0_UserCLK(Tile_X9Y9_UserCLKo),
     .Tile_X0Y0_UserCLKo(Tile_X10Y9_UserCLKo),
     .Tile_X0Y1_UserCLK(Tile_X9Y10_UserCLKo),
@@ -12680,6 +12693,7 @@ assign Column_X10_FrameStrobe = FrameStrobe[MaxFramesPerCol*(10+1)-1:MaxFramesPe
     .NPU_XBAR_SEL1(Tile_X10Y11_NPU_XBAR_SEL1),
     .NPU_XBAR_SEL2(Tile_X10Y11_NPU_XBAR_SEL2),
     .NPU_XBAR_SEL3(Tile_X10Y11_NPU_XBAR_SEL3),
+    .FAB_USER_CLK(Tile_X10Y11_FAB_USER_CLK),
     .Tile_X0Y0_UserCLK(Tile_X9Y11_UserCLKo),
     .Tile_X0Y0_UserCLKo(Tile_X10Y11_UserCLKo),
     .Tile_X0Y1_UserCLK(Tile_X9Y12_UserCLKo),
@@ -13866,6 +13880,7 @@ assign Column_X10_FrameStrobe = FrameStrobe[MaxFramesPerCol*(10+1)-1:MaxFramesPe
     .NPU_XBAR_SEL1(Tile_X10Y13_NPU_XBAR_SEL1),
     .NPU_XBAR_SEL2(Tile_X10Y13_NPU_XBAR_SEL2),
     .NPU_XBAR_SEL3(Tile_X10Y13_NPU_XBAR_SEL3),
+    .FAB_USER_CLK(Tile_X10Y13_FAB_USER_CLK),
     .Tile_X0Y0_UserCLK(Tile_X9Y13_UserCLKo),
     .Tile_X0Y0_UserCLKo(Tile_X10Y13_UserCLKo),
     .Tile_X0Y1_UserCLK(Tile_X9Y14_UserCLKo),
@@ -15052,6 +15067,7 @@ assign Column_X10_FrameStrobe = FrameStrobe[MaxFramesPerCol*(10+1)-1:MaxFramesPe
     .NPU_XBAR_SEL1(Tile_X10Y15_NPU_XBAR_SEL1),
     .NPU_XBAR_SEL2(Tile_X10Y15_NPU_XBAR_SEL2),
     .NPU_XBAR_SEL3(Tile_X10Y15_NPU_XBAR_SEL3),
+    .FAB_USER_CLK(Tile_X10Y15_FAB_USER_CLK),
     .Tile_X0Y0_UserCLK(Tile_X9Y15_UserCLKo),
     .Tile_X0Y0_UserCLKo(Tile_X10Y15_UserCLKo),
     .Tile_X0Y1_UserCLK(Tile_X9Y16_UserCLKo),

@@ -111723,7 +111723,7 @@ Src,/home/jart/work/uni/OWAS/CrocoScale_SoC/FABulousProject/CrocoScale_Fabric/Ti
 RelX,208
 RelY,76
 Width,32
-Height,55
+Height,56
 
 BEL_PORT
 Name,FAB_ACT_ADDR0
@@ -112476,6 +112476,14 @@ Dest,NPU_XBAR_SEL3
 IO,OUTPUT
 RelX,32
 RelY,50
+
+BEL_PORT
+Name,FAB_USER_CLK
+Source,FAB_USER_CLK
+Dest,FAB_USER_CLK
+IO,OUTPUT
+RelX,32
+RelY,51
 
 WIRE
 Name,FAB_ACT_ADDR0 ⟶ FAB_ACT_ADDR0
