@@ -29,6 +29,7 @@ GenerateDelayInSwitchMatrix,80,,,,,,,,,,,,,,,,,
 MultiplexerStyle,custom,#,custom,generic,,,,,,,,,,,,,,
 SuperTileEnable,TRUE,#,TRUE,FALSE,,,,,,,,,,,,,,
 UserCLKDirection,W2E
+IncludeBorderRows,TRUE,# config bits in the top/bottom IO rows; limits the fabric to 30 rows
 ,,,,,,,,,,,,,,,,,,
 Tile,./Tile/LUT4AB/LUT4AB.csv,,,,,,,,,,,,,,,,,
 Tile,./Tile/SOC_DEBUG_IO/SOC_DEBUG_IO.csv,,,,,,,,,,,,,,,,,
